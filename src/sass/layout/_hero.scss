@@ -1,0 +1,34 @@
+.hero {
+    position: relative;
+}
+.section {
+}
+.hero__container {
+}
+.container {
+}
+.hero__title {
+}
+.title {
+}
+.hero__btn {
+}
+.link {
+}
+.btn {
+}
+.hero__link {
+}
+.hero__img-dots {
+    position: absolute;
+}
+.hero__img-iceCream {
+    position: absolute;
+}
+.hero__img-plate {
+    position: absolute;
+
+    @include mobile {
+        display: none;
+    }
+}
