@@ -1,9 +1,14 @@
 .hero {
-    position: relative;
 }
 .section {
 }
 .hero__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 504px;
+}
+.hero__content-wraper {
+    // padding: 49px 0 239px 0;
 }
 .container {
 }
@@ -19,14 +24,38 @@
 }
 .hero__link {
 }
+.hero__img-wraper {
+    flex-grow: 1;
+    position: relative;
+    max-width: 480px;
+    // height: 100%;
+    // padding-top: 230px;
+}
 .hero__img-dots {
     position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .hero__img-iceCream {
+
+    // margin: 0 auto;
     position: absolute;
+    left: 56%;
+    bottom: 20px;
+    @include miniMobile {
+    bottom: -16vw;
+    }
+    transform: translate(-50%, 0%);
+    height: auto;
+    // right: 0;
+    // left: 27px;
+
+    @include miniMobile {
+        // width: 86.25vw;
+    }
 }
 .hero__img-plate {
-    position: absolute;
+    // position: absolute;
 
     @include mobile {
         display: none;
