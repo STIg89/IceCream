@@ -1,0 +1,64 @@
+.location-modal__backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(248, 210, 78, 0.1);
+}
+
+.location-modal {
+    position: relative;
+    background-color: var(--whiteText);
+    border: 2px solid var(--yellowText);
+    border-radius: 10px;
+    padding: 28px;
+    max-width: 280px;
+
+    &__close-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: var(--blackText);
+        fill: currentColor;
+
+        &:hover,
+        &:focus {
+            color: var(--BTN);
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--blackText);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.location-modal__link {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 134px;
+    margin-top: 24px;
+    padding: 12px 34px;
+    background-color: var(--BTN);
+    border-color: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    color: var(--blackText);
+
+    &:hover {
+        background-color: var(--accentBTN);
+    }
+
+    &:focus {
+        background-color: var(--accentBTN);
+        color: var(--whiteText);
+    }
+
+    &:disabled {
+        background-color: var(--disabledBTN);
+    }
+}
