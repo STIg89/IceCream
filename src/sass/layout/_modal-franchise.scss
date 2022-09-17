@@ -11,16 +11,19 @@
   padding: 28px;
   max-width: 280px;
   &__close-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    color: var(--blackText);
-    fill: currentColor;
-    &:hover,
-    &:focus {
-      color: var(--BTN);
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: transparent;
+      color: var(--blackText);
+      fill: currentColor;
+      border-color: transparent;
+  
+      &:hover,
+      &:focus {
+        color: var(--BTN);
+      }
     }
-  }
   &__title {
     font-weight: 400;
     font-size: 16px;
