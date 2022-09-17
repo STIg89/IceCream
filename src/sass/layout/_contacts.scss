@@ -94,29 +94,35 @@
   line-height: 1.29;
   color: var(--blackText);
   fill: currentColor;
-&:hover {
+&:hover,
+&:hover .contacts__button--arrow {
         background-color: var(--accentBTN);
     }
-  &:focus {
+  &:focus,
+  &:focus .contacts__button--arrow {
     background-color: var(--accentBTN);
     color: var(--whiteText);
   }
-  &:disabled {
+  &:disabled,
+  &:disabled .contacts__button--arrow {
     background-color: var(--disabledBTN);
   }
   &--franchise {
     background-color: transparent;
     border: 2px solid var(--BTN);
-    &:hover {
+    &:hover,
+    &:hover .contacts__button--arrow {
         background-color: transparent;
       border-color: var(--accentBTN);
     }
-    &:focus {
+    &:focus,
+        &:focus .contacts__button--arrow {
         background-color: transparent;
       border-color: var(--accentBTN);
       color: var(--whiteText);
     }
-    &:disabled {
+    &:disabled,
+        &:disabled .contacts__button--arrow {
         background-color: transparent;
       border-color: var(--disabledBTN);
     }
