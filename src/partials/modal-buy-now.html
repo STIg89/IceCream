@@ -1,0 +1,42 @@
+<!--Buy now modal-->
+<div class="modal">   
+    <button class="modal-close" type="button">
+        <svg class="modal-icon-close" width="16" height="16">
+            <use href="./images/sprite.svg#icon-icon-close"></use>
+        </svg>
+    </button>
+    <p class="modal-title">Buy now</p>
+    <div>
+        <picture>
+            <source srcset="./images/icecream1x.jpg 1x, ./images/icecream2x.jpg 2x" />
+            <img src="./images/icecream1x.jpg" alt="Icecream">
+        </picture>
+        <p>ice cream</p>
+    </div>
+    <div>
+        <picture>
+            <source srcset="./images/icecoffee1x.jpg 1x, ./images/icecoffee2x.jpg 2x" />
+            <img src="./images/icecoffee1x.jpg" alt="Icecoffee">
+        </picture>
+        <p>ice coffee</p>
+    </div>
+    <div>
+        <picture>
+            <source srcset="./images/milkshake1x.jpg 1x, ./images/milkshake2x.jpg 2x" />
+            <img src="./images/milkshake1x.jpg" alt="Milkshake">
+        </picture>
+        <p>Milkshake</p>
+    </div>
+    <form class="modal-form">
+        <div class="form-field">
+            <input type="text" class="modal-input" name="name" id="name" placeholder="Name" required autofocus />
+        </div>
+        <div class="form-field">
+            <input type="tel" class="modal-input" name="tel" id="tel" placeholder="Phone" required />
+        </div>
+        <div class="form-field form-field-textarea">
+            <textarea name="comment" class="modal-textarea" id="comment" placeholder="Comment"></textarea>
+        </div>
+        <button type="submit" class="button">Submit</button>
+    </form>
+</div>
