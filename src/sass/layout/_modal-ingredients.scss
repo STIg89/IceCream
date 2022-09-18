@@ -4,6 +4,8 @@
   width: 280px;
   padding: 28px 20px;
   background-color: var(--modalBG);
+  border: 2px solid var(--yellowText);
+  border-radius: 10px;
 
   &__title {
     font-family: 'Seymour One';
