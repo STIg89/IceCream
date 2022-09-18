@@ -21,7 +21,7 @@
         margin-bottom: 30px;
     }
     &__text {
-    
+        padding-bottom: 30px;
         font-size: 12px;
         line-height: 255%;
         text-align: center;
@@ -33,6 +33,8 @@
         line-height: 186%;
         text-align: center;
         color: #131313;
+
+        margin-bottom: 24px;
     }
     
 }
@@ -40,9 +42,11 @@
 
 .swiper { 
     width: 100%;
-    height: 300px;
 }
 
-.swiper .swiper-pagination { 
-
+.swiper .swiper-pagination-bullet { 
+    padding-top: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #84A178;
 }
