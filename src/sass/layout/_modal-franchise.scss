@@ -1,26 +1,54 @@
 .franchise-modal__backdrop {
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   height: 100vh;
-  background-color: rgba(248, 210, 78, 0.1);
+  opacity: 1;
+  transition: opacity 250ms var(--cubic);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .franchise-modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
-.franchise-modal {
+
+.franchise__modal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic);
   position: relative;
   background-color: var(--whiteText);
   border: 2px solid var(--yellowText);
   border-radius: 10px;
   padding: 28px;
   max-width: 280px;
+}
+// upwards are the styles for modal javacript
+.franchise-modal {
   &__close-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    color: var(--blackText);
-    fill: currentColor;
-    &:hover,
-    &:focus {
-      color: var(--BTN);
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: transparent;
+      color: var(--blackText);
+      fill: currentColor;
+      border-color: transparent;
+  
+      &:hover,
+      &:focus {
+        color: var(--BTN);
+      }
     }
-  }
   &__title {
     font-weight: 400;
     font-size: 16px;
