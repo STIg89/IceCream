@@ -31,11 +31,34 @@
 .soc__link {
   display: flex;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   align-items: center;
   background-color: #f8d24e;
   border-radius: 50%;
+
+  transition: width var(--duration) var(--cubic),
+    height var(--duration) var(--cubic);
+
+  &:hover .soc__icon,
+  &:focus .soc__icon {
+    fill: var(--whiteText);
+  }
+
+  &:hover {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:focus {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.soc__icon {
+  fill: var(--mainBG);
+  transition: fill var(--duration) var(--cubic);
 }
 
 .footer__contact {
