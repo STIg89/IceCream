@@ -14,14 +14,18 @@
         margin-right: auto;
     }
     &__content {
+        height: 280px;
         background: #84A178;
         border-radius: 10px;
         padding: 34px 39px;
         width: 100%;
         margin-bottom: 30px;
+        @include tablet {
+            height: 138px;
+            padding: 29px 80px;
+        }
     }
     &__text {
-        padding-bottom: 30px;
         font-size: 12px;
         line-height: 255%;
         text-align: center;
@@ -30,11 +34,9 @@
     &__text-author {
         font-weight: 500;
         font-size: 20px;
-        line-height: 186%;
+        line-height: 386%;
         text-align: center;
         color: #131313;
-
-        margin-bottom: 24px;
     }
     
 }
@@ -43,10 +45,13 @@
 .swiper { 
     width: 100%;
 }
+.swiper > div.swiper-pagination { 
+    bottom: 0;
+}
 
 .swiper .swiper-pagination-bullet { 
-    padding-top: 12px;
     width: 12px;
     height: 12px;
+    line-height: 50px;
     background-color: #84A178;
 }
