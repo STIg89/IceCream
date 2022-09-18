@@ -1,41 +1,43 @@
-<div class="modal-ingredients">
-  
-    <button class="button-modal" type="button">
-      <svg width="20" height="20">
-        <use></use>
+<div class="ingridients-modal__backdrop is-hidden" ingridients-data-modal>
+<div class="modal-ingredients ingridients__modal">
+  <!-- classes added only for js execution, please do not delete -->
+    <button ingridients-data-modal-close class="button-modal" type="button" >
+      <svg class="button-modal__svg" width="20" height="20">
+        <use href="./images/sprite.svg#icon-icon-close"></use>
       </svg>
     </button>
 
     <h2 class="modal-ingredients__title">Chocolate icecream</h2>
+    <div class="modal-ingredients__img-box">
     <picture>
       <source
         srcset="
-          ./images/Ingredients_icecream.png,
-          ./images/Ingredients_icecream@2x.png
+          ./images/products_icecream@1x.jpg,
+          ./images/products_icecream@2x.jpg
         "
         media="(max-width:767px)"
       />
-      <img
-        src="./images/Ingredients_icecream.png"
-        alt="Ice Cream"
-        width="132"
+      <img class="modal-ingredients__img"
+        src="./images/products_icecream@1x.jpg"
+        alt="Ice Cream"        
       />
     </picture>
+    </div>
     <ul class="modal-ingredients__list list">
       <li class="modal-ingredients__item">
-        <p class="modal-ingredients__text">320</p>
+        <p class="modal-ingredients__text modal-ingredients__text--decoration">320</p>
         <p class="modal-ingredients__text">kcal</p>
       </li>
       <li class="modal-ingredients__item">
-        <p class="modal-ingredients__text">4g</p>
+        <p class="modal-ingredients__text modal-ingredients__text--decoration">4g</p>
         <p class="modal-ingredients__text">Prote...</p>
       </li>
       <li class="modal-ingredients__item">
-        <p class="modal-ingredients__text">8,2g</p>
+        <p class="modal-ingredients__text modal-ingredients__text--decoration">8,2g</p>
         <p class="modal-ingredients__text">Fats</p>
       </li>
       <li class="modal-ingredients__item">
-        <p class="modal-ingredients__text">40,4g</p>
+        <p class="modal-ingredients__text modal-ingredients__text--decoration">40,4g</p>
         <p class="modal-ingredients__text">Carbs</p>
       </li>
     </ul>
@@ -103,4 +105,5 @@
 
     <button class="button" type="submit">Submit</button>
   </div>
+</div>
 </div>
