@@ -1,0 +1,32 @@
+<div class="location-modal__backdrop is-hidden" location-data-modal>
+  <div class="location__modal">
+    <button
+      location-data-modal-close
+      class="location-modal__close-button"
+      title="Close"
+    >
+      <svg class="location-modal__svg">
+        <use href="./images/sprite.svg#icon-icon-close"></use>
+      </svg>
+    </button>
+    <p class="location-modal__title title">Our Locations</p>
+    <picture>
+      <source
+        srcset="./images/location-448.jpg 1x, 
+        ./images/location-448@2x.jpg 2x"
+        media="(min-width:768px)">
+      <source
+        srcset="./images/location-224.jpg 1x, 
+        ./images/location-224@2x.jpg 2x"
+        media="(max-width:767px)">
+      <img src="./images/location-224.jpg" alt="location" width="224" />
+    </picture>
+    <a
+      href="https://goo.gl/maps/zvRGGzdeN4ZB4SaW7"
+      target="_blank"
+      class="location-modal__link link"
+    >
+      Open map
+    </a>
+  </div>
+</div>

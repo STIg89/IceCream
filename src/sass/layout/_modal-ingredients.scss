@@ -1,0 +1,206 @@
+.ingridients-modal__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 250ms var(--cubic);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .ingridients__modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.ingridients__modal {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic);
+}
+// upwards are the styles for modal javacript
+
+.modal-ingredients {
+  position: relative;
+  display: block;
+  width: 280px;
+  padding: 28px 20px;
+  background-color: var(--modalBG);
+  border: 2px solid var(--yellowText);
+  border-radius: 10px;
+
+  &__title {
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__img-box {
+    background-color: rgba(156, 190, 143, 0.7);
+    border-radius: 50%;
+    width: 132px;
+    height: 138px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  }
+
+  &__img {
+    width: 130px;
+    height: 131px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-bottom: 39px;
+  }
+
+  &__item {
+    width: 53px;
+    height: 72px;
+    border: 2px solid #9cbe8f;
+    border-radius: 40px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 2.8;
+  }
+
+  &__text--decoration {
+    background-color: #9cbe8f;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+  }
+}
+
+.ingredients {
+  margin-bottom: 48px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--blackText);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: 0.04em;
+    color: var(--blackText);
+    margin-bottom: 11px;
+  }
+}
+
+.form {
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: 1px solid var(--mainBG);
+    border-radius: 10px;
+    background-color: rgba(248, 210, 78, 0.1);
+  }
+
+  &__input {
+    height: 42px;
+    margin-bottom: 16px;
+  }
+
+  &__textarea {
+    height: 84px;
+    margin-bottom: 32px;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    padding-left: 10px;
+    padding-top: 11px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--blackText);
+  }
+}
+
+.button {
+  display: block;
+  width: 132px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--yellowText);
+  border-radius: 10px;
+  border-color: transparent;
+}
+
+.button-modal {
+  position: absolute;
+  padding: 0;
+  top: 28px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+  &__svg {
+    fill: currentColor;
+    transition: fill var(--duration) var(--cubic);
+  }
+
+  &__svg:hover,
+  &__svg:focus {
+    fill: var(--accentBTN);
+  }
+}
+
+.button:hover {
+  background-color: var(--accentBTN);
+  transition: color var(--duration) var(--cubic),
+    background-color var(--duration) var(--cubic);
+}
+
+.button:focus {
+  color: var(--whiteText);
+  background-color: var(--accentBTN);
+}
