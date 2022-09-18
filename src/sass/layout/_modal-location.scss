@@ -53,13 +53,13 @@
   }
 
   &__title {
-    @include font-box (400, 16px, 1.5);
+    @include font-box(400, 16px, 1.5);
     color: var(--blackText);
     text-align: center;
     margin-bottom: 20px;
     @include tablet {
-        @include font-box (null, 20px, 1.4);
-        margin-bottom: 32px;
+      @include font-box(null, 20px, 1.4);
+      margin-bottom: 32px;
     }
   }
   &__svg {
@@ -81,7 +81,7 @@
   background-color: var(--BTN);
   border-color: transparent;
   border-radius: 10px;
-  @include font-box (600, 12px, 1.25, null);
+  @include font-box(600, 12px, 1.25, null);
   color: var(--blackText);
   @include tablet {
     margin-top: 32px;

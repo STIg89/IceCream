@@ -21,39 +21,43 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   @include tablet {
-      width: calc((100% - 32px) / 3);
-      max-width: 224px;
-        min-width: auto;
-        height: 100%;
-        padding: 40px 25px;
-        margin-bottom: 0;
-    }
+    width: calc((100% - var(--Gap)*2) / 3);
+    max-width: 224px;
+    min-width: auto;
+    height: 100%;
+    padding: 40px 25px;
+    margin-bottom: 0;
+  }
+  @include pc {
+    width: calc((100% - var(--Gap)*4) / 3);
+    max-width: 368px;
+    padding: 40px;
+  }
   &-category {
     display: inline-block;
     padding: 0px 23px;
     margin-bottom: 20px;
     background-color: var(--yellowText);
     border-radius: 4px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
+    @include font-box(500, 12px, 1.86, 0.04em);
     text-transform: uppercase;
     color: var(--blackText);
     @include tablet {
       font-size: 16px;
       padding: 0px 11px;
+      margin-bottom: 32px;
     }
   }
   &-title {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
+    @include font-box(500, 12px, 1.86, 0.04em);
     color: var(--blackText);
     margin-bottom: 8px;
     @include tablet {
       font-size: 14px;
+      margin-bottom: 12px;
+    }
+    @include pc {
+      font-size: 16px;
     }
   }
 }
@@ -62,18 +66,19 @@
   padding-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
   @include tablet {
-    padding-bottom: 26px;
-    }
+    padding-bottom: 32px;
+  }
 }
 .contacts__link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
-  letter-spacing: 0.04em;
+  @include font-box(500, 12px, 1.83, 0.04em);
   color: var(--milkshakes);
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
   @include tablet {
-      font-size: 14px;
-    }
+    font-size: 14px;
+  }
 }
 .work-schedule {
   &__list {
@@ -81,24 +86,28 @@
     padding-top: 24px;
     border-bottom: 1px solid #e1e1e1;
     @include tablet {
-        padding-bottom: 32px;
-          padding-top: 32px;
-      }
+      padding-bottom: 32px;
+      padding-top: 32px;
+    }
   }
   &__item:not(:last-child) {
     margin-bottom: 8px;
     @include tablet {
-        margin-bottom: 9px;
-      }
+      margin-bottom: 9px;
+    }
+    @include pc {
+      margin-bottom: 12px;
+    }
   }
   &__text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
+    @include font-box(500, 12px, 1.86, null);
     color: var(--blackText);
     @include tablet {
-        font-size: 14px;
-      }
+      font-size: 14px;
+    }
+    @include pc {
+      font-size: 16px;
+    }
     &--gray {
       color: var(--grayText);
     }
@@ -112,13 +121,14 @@
     }
   }
   &__link {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 1.5;
-      color: var(--blackText);
-      @include tablet {
-          font-size: 14px;
-        }
+    @include font-box(500, 12px, 1.5, null);
+    color: var(--blackText);
+    @include tablet {
+      font-size: 14px;
+    }
+    @include pc {
+      font-size: 16px;
+    }
   }
 }
 .contacts__button {
@@ -128,17 +138,16 @@
   width: 196px;
   padding: 12px 34px;
   background-color: var(--BTN);
-  border: transparent;
+  border: 2px solid var(--BTN);
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.29;
+  @include font-box(600, 14px, 1.29, null);
   color: var(--blackText);
   fill: currentColor;
-&:hover,
-&:hover .contacts__button--arrow {
-        background-color: var(--accentBTN);
-    }
+  &:hover,
+  &:hover .contacts__button--arrow {
+    background-color: var(--accentBTN);
+    border-color: var(--accentBTN);
+  }
   &:focus,
   &:focus .contacts__button--arrow {
     background-color: var(--accentBTN);
@@ -153,46 +162,45 @@
     border: 2px solid var(--BTN);
     &:hover,
     &:hover .contacts__button--arrow {
-        background-color: transparent;
+      background-color: transparent;
       border-color: var(--accentBTN);
     }
     &:focus,
-        &:focus .contacts__button--arrow {
-        background-color: transparent;
+    &:focus .contacts__button--arrow {
+      background-color: transparent;
       border-color: var(--accentBTN);
       color: var(--whiteText);
     }
     &:disabled,
-        &:disabled .contacts__button--arrow {
-        background-color: transparent;
+    &:disabled .contacts__button--arrow {
+      background-color: transparent;
       border-color: var(--disabledBTN);
     }
   }
 }
 .contacts-button__list {
-    width: 100%;
-    max-width: calc(480px - 40px);
-    @include tablet {
-      @include flex;
-      gap: var(--Gap);
-      max-width: auto;
-      margin-right: auto;
-      margin-left: auto;
-    }
+  width: 100%;
+  max-width: calc(480px - 40px);
+  @include tablet {
+    @include flex;
+    gap: var(--Gap);
+    max-width: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .contacts-button__item {
-    width: 100%;
-    min-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    min-width: 196px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 16px;
     @include tablet {
-      min-width: 196px;
-      margin: 0;
+      margin-bottom: 0;
     }
-    &:not(:last-child) {
-        margin-bottom: 16px;
-        @include tablet {
-          margin-bottom: 0;
-        }
-    }
+  }
 }

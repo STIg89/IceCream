@@ -35,7 +35,7 @@
     margin: -1px;
 }
 
-@mixin font-box($fw, $fs, $lh, $ls: 0.03em) {
+@mixin font-box($fw, $fs, $lh, $ls: 0.04em) {
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
