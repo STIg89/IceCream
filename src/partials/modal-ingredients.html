@@ -1,6 +1,7 @@
-<div class="modal-ingredients">
-  
-    <button class="button-modal" type="button">
+<div class="ingridients-modal__backdrop is-hidden" ingridients-data-modal>
+<div class="modal-ingredients ingridients__modal">
+  <!-- classes added only for js execution, please do not delete -->
+    <button ingridients-data-modal-close class="button-modal" type="button" >
       <svg class="button-modal__svg" width="20" height="20">
         <use href="./images/sprite.svg#icon-icon-close"></use>
       </svg>
@@ -11,13 +12,13 @@
     <picture>
       <source
         srcset="
-          ./images/product_icecream@1x-min.jpg,
-          ./images/product_icecream@2x-min.jpg
+          ./images/products_icecream@1x.jpg,
+          ./images/products_icecream@2x.jpg
         "
         media="(max-width:767px)"
       />
       <img class="modal-ingredients__img"
-        src="./images/product_icecream@1x-min.jpg"
+        src="./images/products_icecream@1x.jpg"
         alt="Ice Cream"        
       />
     </picture>
@@ -104,4 +105,5 @@
 
     <button class="button" type="submit">Submit</button>
   </div>
+</div>
 </div>

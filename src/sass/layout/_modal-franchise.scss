@@ -1,60 +1,119 @@
 .franchise-modal__backdrop {
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
   height: 100vh;
-  background-color: rgba(248, 210, 78, 0.1);
+  opacity: 1;
+  transition: opacity 250ms var(--cubic);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .franchise-modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
-.franchise-modal {
+
+.franchise__modal {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic);
   position: relative;
   background-color: var(--whiteText);
   border: 2px solid var(--yellowText);
   border-radius: 10px;
   padding: 28px;
   max-width: 280px;
+  @include tablet {
+    top: 55%;
+    max-width: 568px;
+    padding: 32px 60px;
+  }
+}
+// upwards are the styles for modal javacript
+.franchise-modal {
   &__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
+    background-color: transparent;
     color: var(--blackText);
     fill: currentColor;
+    border-color: transparent;
+    @include tablet {
+      top: 20px;
+      right: 20px;
+    }
     &:hover,
     &:focus {
       color: var(--BTN);
     }
   }
   &__title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+    @include font-box(400, 16px, 1.5, null);
     color: var(--blackText);
+    text-align: center;
     margin-bottom: 20px;
+    @include tablet {
+      @include font-box(null, 20px, 1.4, null);
+      max-width: 322px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+  }
+  &__svg {
+    width: 16px;
+    height: 16px;
+    @include tablet {
+      width: 20px;
+      height: 20px;
+    }
   }
   &__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4;
+    @include font-box(400, 14px, 1.4, null);
     color: var(--blackText);
     margin-bottom: 24px;
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }
 .franchise-form {
   width: 100%;
   &__input {
     width: 100%;
-    height: 32px;
     margin-bottom: 12px;
     background-color: rgba(248, 210, 78, 0.1);
     border: 1px solid var(--mainBG);
     border-radius: 10px;
     padding: 7px 12px;
+    @include tablet {
+      max-width: 368px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: var(--Gap);
+      padding: 11px 16px;
+    }
     &:focus {
       outline: 1px solid var(--BTN);
       border-color: var(--BTN);
     }
     &::placeholder {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1.4;
+      @include font-box(400, 12px, 1.4, null);
       color: var(--blackText);
+      @include tablet {
+        font-size: 14px;
+      }
     }
   }
   &__comment {
@@ -66,15 +125,24 @@
     background-color: rgba(248, 210, 78, 0.1);
     border: 1px solid var(--mainBG);
     border-radius: 10px;
+    @include tablet {
+      max-width: 368px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 32px;
+      padding: 11px 16px;
+    }
     &:focus {
       outline: 1px solid var(--BTN);
       border-color: var(--BTN);
     }
     &::placeholder {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1.4;
+      @include font-box(400, 12px, 1.4, null);
       color: var(--blackText);
+      @include tablet {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -86,10 +154,11 @@
   background-color: var(--BTN);
   border-color: transparent;
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.25;
+  @include font-box(600, 12px, 1.25, null);
   color: var(--blackText);
+  @include tablet {
+    font-size: 14px;
+  }
   &:hover {
     background-color: var(--accentBTN);
   }
