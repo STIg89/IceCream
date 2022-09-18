@@ -21,7 +21,7 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   @include tablet {
-    width: calc((100% - 32px) / 3);
+    width: calc((100% - var(--Gap)*2) / 3);
     max-width: 224px;
     min-width: auto;
     height: 100%;
@@ -29,7 +29,7 @@
     margin-bottom: 0;
   }
   @include pc {
-    width: calc((100% - 64px) / 3);
+    width: calc((100% - var(--Gap)*4) / 3);
     max-width: 368px;
     padding: 40px;
   }
