@@ -1,3 +1,23 @@
+.footer {
+  @include mobile {
+    margin-top: 40px;
+  }
+  @include pc {
+    margin-top: 120px;
+  }
+}
+
+.footer__wrap {
+  @include tablet {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  @include pc {
+    margin-bottom: 54px;
+  }
+}
+
 .footer__slogan-first {
   margin-bottom: 16px;
   font-weight: 700;
@@ -5,6 +25,23 @@
   line-height: 22px;
   text-transform: uppercase;
   color: var(--whiteText);
+
+  @include mobile {
+    width: 280px;
+  }
+
+  @include tablet {
+    width: 352px;
+    margin-bottom: 9px;
+    font-size: 26px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+
+  @include pc {
+    width: auto;
+    font-size: 30px;
+  }
 }
 
 .footer__slogan-second {
@@ -16,10 +53,50 @@
   text-transform: uppercase;
 
   color: var(--whiteText);
+
+  @include mobile {
+    width: 280px;
+  }
+
+  @include tablet {
+    width: 352px;
+    margin-bottom: 0px;
+    font-size: 48px;
+    line-height: 1.22;
+    letter-spacing: 0.06em;
+  }
+
+  @include pc {
+    width: auto;
+    font-size: 58px;
+  }
+}
+
+.footer__soc-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  @include tablet {
+    margin-left: auto;
+    padding-bottom: 15px;
+  }
+
+  @include pc {
+    padding-bottom: 0px;
+  }
 }
 
 .footer__soc {
   margin-bottom: 38px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include pc {
+    margin-bottom: 40px;
+  }
 }
 
 .soc__list {
@@ -31,14 +108,14 @@
 .soc__link {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 34px;
   height: 34px;
-  align-items: center;
+
   background-color: #f8d24e;
   border-radius: 50%;
 
-  transition: width var(--duration) var(--cubic),
-    height var(--duration) var(--cubic);
+  transition: transform var(--duration) var(--cubic);
 
   &:hover .soc__icon,
   &:focus .soc__icon {
@@ -46,13 +123,11 @@
   }
 
   &:hover {
-    width: 32px;
-    height: 32px;
+    transform: scale(0.95);
   }
 
   &:focus {
-    width: 35px;
-    height: 35px;
+    transform: scale(1.05);
   }
 }
 
@@ -63,6 +138,10 @@
 
 .footer__contact {
   margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 0px;
+  }
 }
 
 .footer__contact-content {
@@ -71,6 +150,10 @@
   line-height: 1.86;
   text-align: right;
   color: var(--blackText);
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .tel__text--color {
@@ -83,15 +166,25 @@
 }
 
 .footer__text-underline {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: auto;
   padding-top: 16px;
   padding-bottom: 18px;
-  padding-left: 65px;
-  padding-right: 65px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
   text-align: center;
   color: #7a7a7a;
+
+  @include miniMobile {
+    width: 158px;
+  }
+
+  @include tablet {
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+  }
+
+  @include pc {
+    font-size: 12px;
+  }
 }

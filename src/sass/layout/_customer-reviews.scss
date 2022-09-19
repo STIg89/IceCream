@@ -1,5 +1,41 @@
-.customer-reviews {
+.bg-wrapper { 
     background-color: #FCFCFC;
+    background-image: url('../images/ice-cream-bg-mob.png');
+    background-position: top 100px left 0px;
+    background-repeat: no-repeat;
+    @include retina {
+      background-image: url('../images/ice-cream-bg-mob-2x.png');
+    }
+    @include tablet {
+        background-position: top 100px left 0;
+      background-image: url('../images/ice-cream-bg-tab.png');
+      @include retina {
+        background-image: url('../images/ice-cream-bg-tab-2x.png');
+      }
+    }
+    @include pc {
+      background-image: url('../images/ice-cream-bg-desk.png');
+      @include retina {
+        background-image: url('../images/ice-cream-bg-desk-2x.png');
+      }
+    }
+}
+.swiper { 
+    width: 100%;
+}
+.swiper > div.swiper-pagination { 
+    position: static; 
+}
+
+.swiper .swiper-pagination-bullet { 
+    width: 12px;
+    height: 12px;
+    line-height: 50px;
+    background-color: #84A178;
+}
+
+
+.customer-reviews {
     padding-top: 128px;
     padding-bottom: 100px;
     &__title {
@@ -58,17 +94,6 @@
         }
     }
 }
-.swiper { 
-    width: 100%;
-}
-.swiper > div.swiper-pagination { 
-    position: static; 
-}
 
-.swiper .swiper-pagination-bullet { 
-    width: 12px;
-    height: 12px;
-    line-height: 50px;
-    background-color: #84A178;
-}
+
 
