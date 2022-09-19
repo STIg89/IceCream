@@ -1,3 +1,9 @@
+.about-section {
+    padding-top: 60px;
+    @include mobile {
+            display: none;
+        }
+}
 .about__title-main {
     font-weight: 800;
     font-size: 30px;
@@ -10,8 +16,6 @@
 }
     
 .about__title-second {
-    font-family: 'Seymour One';
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
@@ -24,34 +28,30 @@
 }
     
 .about__dscr {
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 194%;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.76;
     letter-spacing: 0.04em;
     color: #FCFCFC;
     width: 100%;
     align-self: flex-end;
-    
+    @include pc {
+            font-size: 14px;
+            line-height: 194%;
+    }
 } 
     
 .about_form_button {
-        width: 152px;
-        height: 42px;
+    padding: 12px 34px;
         text-align: center;
         color: #131313;
         background-color: #f8d24e;
         border: none;
         border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
         font-size: 14px;
         font-weight: 600;
-        line-height: 17px;
-        display: flex;
+        line-height: 1.29;
         cursor: pointer;
 }
     
@@ -67,14 +67,12 @@
 }
     
  .about_items {
-        gap: 8px
+        gap: 8px;
 }
 
 .about__container {
         display: flex;
-        @include mobile {
-            display: none;
-        }
+        
 }
 
 .about__image-wraper {
@@ -83,5 +81,13 @@
 }
 
 .about__wraper {
-    max-width: 463px ;
+        margin-left: 32px;
+            margin-top: 7px;
+                max-width: 336px;
+
+    @include pc {
+    max-width: 463px;
+    margin-left: 100px;
+    margin-top: 90px;
+    }
 }
