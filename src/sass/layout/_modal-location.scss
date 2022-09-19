@@ -6,7 +6,7 @@
   width: 100%;
   height: 100vh;
   opacity: 1;
-  transition: opacity 250ms var(--cubic);
+  transition: opacity var(--duration) var(--cubic);
   background-color: rgba(0, 0, 0, 0.2);
   &.is-hidden {
     opacity: 0;
@@ -21,7 +21,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--cubic);
+  transition: transform var(--duration) var(--cubic);
   position: relative;
   background-color: var(--whiteText);
   border: 2px solid var(--yellowText);
@@ -42,6 +42,7 @@
     color: var(--blackText);
     fill: currentColor;
     border: transparent;
+    transition: color var(--duration) var(--cubic);
     @include tablet {
       top: 20px;
       right: 20px;
@@ -83,6 +84,8 @@
   border-radius: 10px;
   @include font-box(600, 12px, 1.25, null);
   color: var(--blackText);
+  transition: color var(--duration) var(--cubic),
+  background-color var(--duration) var(--cubic);
   @include tablet {
     margin-top: 32px;
     max-width: 145px;

@@ -1,5 +1,41 @@
+.bg-wrapper { 
+    background-color: #FCFCFC;
+    background-image: url('../images/ice-cream-bg-mob.png');
+    background-position: top 100px left 0px;
+    background-repeat: no-repeat;
+    @include retina {
+      background-image: url('../images/ice-cream-bg-mob-2x.png');
+    }
+    @include tablet {
+        background-position: top 100px left 0;
+      background-image: url('../images/ice-cream-bg-tab.png');
+      @include retina {
+        background-image: url('../images/ice-cream-bg-tab-2x.png');
+      }
+    }
+    @include pc {
+      background-image: url('../images/ice-cream-bg-desk.png');
+      @include retina {
+        background-image: url('../images/ice-cream-bg-desk-2x.png');
+      }
+    }
+}
+.swiper { 
+    width: 100%;
+}
+.swiper > div.swiper-pagination { 
+    position: static; 
+}
+
+.swiper .swiper-pagination-bullet { 
+    width: 12px;
+    height: 12px;
+    line-height: 50px;
+    background-color: #84A178;
+}
+
+
 .customer-reviews {
-    background-color: var(--whiteBG);
     padding-top: 128px;
     padding-bottom: 100px;
     &__title {
@@ -14,39 +50,50 @@
         margin-right: auto;
     }
     &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 256px;
+
         background: #84A178;
         border-radius: 10px;
         padding: 34px 39px;
         width: 100%;
         margin-bottom: 30px;
+        @include tablet {
+            height: 138px;
+            padding: 29px 80px;
+        }
     }
     &__text {
-        padding-bottom: 30px;
         font-size: 12px;
         line-height: 255%;
         text-align: center;
+        letter-spacing: 0.04em;
         color: #FCFCFC;
+        @include tablet { 
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 186%;
+        }
+        @include pc { 
+            font-size: 16px;
+        }
     }
     &__text-author {
+        margin-bottom: 14px;
         font-weight: 500;
         font-size: 20px;
         line-height: 186%;
         text-align: center;
         color: #131313;
-
-        margin-bottom: 24px;
+        @include tablet { 
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
     }
-    
 }
 
 
-.swiper { 
-    width: 100%;
-}
 
-.swiper .swiper-pagination-bullet { 
-    padding-top: 12px;
-    width: 12px;
-    height: 12px;
-    background-color: #84A178;
-}
