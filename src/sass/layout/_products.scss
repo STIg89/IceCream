@@ -15,7 +15,6 @@
       background-image: url(../images/bg-products-tab-2x.jpg);
     }
     padding-bottom: 82px;
-    // background-size: contain;
   }
   @include pc {
     padding-bottom: 66px;
@@ -26,9 +25,7 @@
   }
 }
 .products__pre-title {
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.22;
+  @include font-box(800, 18px, 1.22, 0.04em);
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -40,10 +37,8 @@
   }
 }
 .products__title {
-  font-size: 30px;
-  line-height: 1.27;
+  @include font-box(null, 30px, 1.27, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 148px;
   @include tablet {
@@ -106,21 +101,14 @@
     }
   }
   @include tablet {
+    padding: 108px 26px 14px 26px;
     height: 428px;
     width: calc((100% - 32px) / 3);
-    padding-top: 108px;
-    padding-left: 26px;
-    padding-right: 26px;
-    // margin-left: 0;
-    // margin-right: 0;
   }
   @include pc {
     height: 536px;
     width: calc((100% - 64px) / 3);
-    padding-top: 166px;
-    padding-left: 62px;
-    padding-right: 62px;
-    padding-bottom: 60px;
+    padding: 166px 62px 60px 60px;
   }
 }
 .products-list__item:first-child:before {
@@ -150,11 +138,8 @@
   }
 }
 .products-list__title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
+  @include font-box(700, 20px, 1.2, 0.04em);
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 40px;
   @include tablet {
@@ -166,12 +151,10 @@
   }
 }
 .products-list__text {
+  @include font-box(400, 14px, 1.76, 0.04em);
   margin-right: auto;
   margin-left: auto;
-  font-size: 14px;
-  line-height: 1.76;
   text-align: center;
-  letter-spacing: 0.04em;
   margin-bottom: auto;
   @include pc {
     font-size: 16px;
