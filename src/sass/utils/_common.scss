@@ -32,6 +32,15 @@ body {
     }
 }
 
+.btn {
+    transition: color var(--duration) var(--cubic),
+    border-color var(--duration) var(--cubic);
+}
+
+.link {
+    transition: color var(--duration) var(--cubic);
+}
+
 .round { 
     border-radius: 50%;
 }

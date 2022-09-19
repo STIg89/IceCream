@@ -42,6 +42,13 @@
     letter-spacing: $ls;
 }
 
+@mixin font ($fw:400, $fs:14, $lh:26, $ls:0.02) {
+  font-weight: $fw;
+  font-size: $fs+px;
+  line-height: $lh/$fs;
+  letter-spacing: $ls+em;
+}
+
 @mixin flex {
     display: flex;
     align-items: center;
