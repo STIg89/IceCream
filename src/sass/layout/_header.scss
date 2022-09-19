@@ -1,59 +1,110 @@
-.header {
-    &-nav {
-        display: none;
-        @include pc {
-            display: flex;
-            margin-left: 269px;
-        }
-    }
-    &-button {
-        display: none;
-        @include pc {
-            display: flex;
-            justify-content: center;
-            margin-left: auto;
-            border: none;
-            width: 152px;
-            height: 42px;
-            background-color: #F8D24E;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.21;
-            display: flex;
-            align-items: center;
-            
-            color: #131313;
-        }
-    }
-
-    &-top {
+.header__mobile-menu {
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 480px;
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        background-color: var(--mainBG);
+        padding: 12px 20px 63px;
+        transform: translateY(0);
+        z-index: 2;
+        opacity: 1;
+        transition: transform var(--duration) var(--cubic), z-index var(--duration) var(--cubic), opacity var(--duration) var(--cubic);
         display: flex;
-        justify-content: space-between;
-        padding-top: 12px;
-        @media screen and (min-width: 1200px) {
-        align-items: center;
-        }
+        flex-direction: column;
+        
     }
 
-    &-list {
-        display: flex;
-        gap: 27px;
-    }
+}
 
-    &-item {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.25;
-        color: #FCFCFC;
-    }
-    &-link {
-        &:hover,
-        &:focus {
-            color: #F8D24E;
-        }
+.header__mobile-menu--is-hidden {
+    @media screen and (max-width: 767px) {
+        transform: translateY(-100%);
+        opacity: 0;
+        z-index: -1;
     }
 }
+
+.mobile_menu-btn--close {
+    position: absolute;
+    right: 20;
+    top: 16;
+    border: none;
+    background: transparent;
+    line-height: 0;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile_menu-btn {
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+    padding: 10px 15px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile_menu-icon {
+    fill: currentColor;
+}
+
+.header-logo-menu {
+    position: absolute;
+    left: 20;
+    top: 12;
+}
+
+
+
+
+
+
+.header {
+    
+    // &-nav {
+    //     display: none;
+    //     @include pc {
+    //         display: flex;
+    //         margin-left: 269px;
+    //     }
+    // }
+    // &-button {
+    //     display: none;
+
+        // @include tablet {
+        //     display: flex;
+        //     justify-content: center;
+        //     margin-left: auto;
+        //     border: none;
+        //     width: 152px;
+        //     height: 42px;
+        //     background-color: #F8D24E;
+        //     border-radius: 10px;
+        //     font-weight: 600;
+        //     font-size: 14px;
+        //     line-height: 1.21;
+        //     display: flex;
+        //     align-items: center;
+            
+        //     color: #131313;
+        // }
+    }
+
+    
+
+   
+
+    
+
+    
 
 // .header-menu-button {
 //     display: none;
@@ -85,13 +136,10 @@
         fill: #FCFCFC;
     }
     &-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         margin-left: auto;
         margin-right: auto;
-        border: none;
-        background-color: transparent;
+        border: transparent;
         width: 152px;
         height: 42px;
         background-color: #F8D24E;
@@ -99,7 +147,6 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 17px;
-        display: flex;
         align-items: center;
         text-align: center;
     
@@ -109,7 +156,10 @@
         }
 
         @include tablet {
-            display: none;
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            z-index: 1000;
         }
     }
     &-mobile {
@@ -160,6 +210,7 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+        margin-top: 100px;
     }
     &-link {
         &:hover, &:focus {
