@@ -1,4 +1,6 @@
-.ingridients-modal__backdrop {
+.icecream-modal__backdrop,
+.coffee-modal__backdrop,
+.milkshake-modal__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,22 +11,24 @@
   transition: opacity 250ms var(--cubic);
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
-
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
   }
-
-  &.is-hidden .ingridients__modal {
-    transform: translate(-50%, -50%) scale(0.9);
-  }
+}
+.icecream-modal__backdrop.is-hidden .icecream__modal,
+.coffee-modal__backdrop.is-hidden .coffee__modal,
+.milkshake-modal__backdrop.is-hidden .milkshake__modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
-.ingridients__modal {
+.icecream__modal,
+.coffee__modal,
+.milkshake__modal {
   position: absolute;
-  top: 90%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -30%) scale(1);
   transition: transform 250ms var(--cubic);
 }
 // upwards are the styles for modal javacript
