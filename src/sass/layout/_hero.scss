@@ -105,6 +105,42 @@
         padding: 11px 22px;
     }
 }
+
+.hero__text-wraper {
+    position: absolute;
+    left: 217px;
+    bottom: 26px;
+    width: 152px;
+
+    @include mobile {
+        display: none;
+    }
+
+    @include pc {
+        left: 256px;
+        bottom: 100px;
+        width: 200px;
+    }
+}
+
+.hero__text {
+    @include font (400, 12, 17, 0);
+    color: var(--whiteText);
+    margin-bottom: 13px;
+
+    @include pc {
+        @include font (400, 14, 20, 0);
+        margin-bottom: 25px;
+    }
+}
+
+.hero-text__icon{
+    fill: var(--whiteText);
+
+    .hero__text-wraper:hover & {
+        transform: scale(1.2);
+    }
+}
 .hero__img-wraper {
     flex-grow: 1;
     height: 329px;
