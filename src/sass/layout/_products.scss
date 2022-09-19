@@ -93,6 +93,8 @@
       height: 300px;
       top: -35%;
       left: 34px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   @include mobile {
@@ -112,6 +114,7 @@
   }
 }
 .products-list__item:first-child:before {
+  background-color: var(--ice-cream);
   background-image: url(../images/product-1-mob-tab-1x.jpg);
   box-shadow: 0px 12px 0px 0px rgba(205, 225, 197, 0.53),
     0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
@@ -127,6 +130,7 @@
   }
 }
 .products-list__item:nth-child(2):before {
+  background-color: var(--ice-coffee);
   background-image: url(../images/product-2-mob-tab-1x.jpg);
   box-shadow: 0 12px #fff0be87, 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
   background-size: cover;
@@ -141,6 +145,7 @@
   }
 }
 .products-list__item:last-child:before {
+  background-color: var(--milkshakes);
   background-image: url(../images/product-3-mob-tab-1x.jpg);
   box-shadow: 0px 12px 0px 0px #f9a576b2,
     0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
@@ -194,6 +199,10 @@
     width: 50px;
     stroke: black;
     stroke-width: 1px;
-    height: 20px;
+    height: 18px;
   }
+}
+.products-list__icon {
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
