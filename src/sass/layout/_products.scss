@@ -119,6 +119,12 @@
   @include retina {
     background-image: url(../images/product-1-mob-tab-2x.jpg);
   }
+  @include pc {
+    background-image: url(../images/product-1-desk-1x.jpg);
+    @include retina {
+      background-image: url(../images/product-1-desk-2x.jpg);
+    }
+  }
 }
 .products-list__item:nth-child(2):before {
   background-image: url(../images/product-2-mob-tab-1x.jpg);
@@ -127,14 +133,26 @@
   @include retina {
     background-image: url(../images/product-2-mob-tab-2x.jpg);
   }
+  @include pc {
+    background-image: url(../images/product-2-desk-1x.jpg);
+    @include retina {
+      background-image: url(../images/product-2-desk-2x.jpg);
+    }
+  }
 }
 .products-list__item:last-child:before {
-  background-image: url(../images/product-3-desk-1x.jpg);
+  background-image: url(../images/product-3-mob-tab-1x.jpg);
   box-shadow: 0px 12px 0px 0px #f9a576b2,
     0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
   background-size: cover;
   @include retina {
-    background-image: url(../images/product-3-desk-2x.jpg);
+    background-image: url(../images/product-3-mob-tab-2x.jpg);
+  }
+  @include pc {
+    background-image: url(../images/product-3-desk-1x.jpg);
+    @include retina {
+      background-image: url(../images/product-3-desk-2x.jpg);
+    }
   }
 }
 .products-list__title {
