@@ -16,7 +16,7 @@
     }
 
     @include pc {
-        padding: 45px 0 20px;
+        padding: 45px 0 42px;
     }
 }
 .container {
@@ -39,6 +39,16 @@
 
         span {
             @include font (400, 24, 13, 0);
+        }
+    }
+
+    @include pc {
+        @include font (400, 38, 48, 0);
+        max-width: 368px;
+        margin-bottom: 28px;
+
+        span {
+            @include font (400, 38, 48, 0);
         }
     }
 }
@@ -66,6 +76,12 @@
     &:focus {
         color: var(--whiteText);
     }
+
+    @include pc {
+        @include font (600, 14, 18, 0);
+        width: 134px;
+        height: 42px;
+    }
 }
 .link {
 }
@@ -83,6 +99,11 @@
     &:focus {
         color: var(--whiteText);
     }
+
+    @include pc {
+        @include font (600, 14, 18, 0);
+        padding: 11px 22px;
+    }
 }
 .hero__img-wraper {
     flex-grow: 1;
@@ -97,14 +118,24 @@
         max-width: 768px;
         height: 173px;
     }
+
+    @include pc {
+        max-width: 1200px;
+        height: 287px;
+    }
 }
 .hero__img-dots {
     position: absolute;
     bottom: 0;
     right: 0;
+    pointer-events: none;
 
     @include tablet {
         width: 768px;
+    }
+
+    @include pc {
+        width: 1200px;
     }
 }
 .hero__img-iceCream {
@@ -116,10 +147,16 @@
     transform: translate(-50%, 0%);
     width: 480px;
     pointer-events: none;
+    
     @include tablet {
         left: 555px;
         bottom: -57px;
         width: auto;
+    }
+
+    @include pc {
+        left: 880px;
+        bottom: -100px;
     }
     @include miniMobile {
     bottom: -16vw;
@@ -130,7 +167,13 @@
 }
 .hero__img-plate {
     position: absolute;
-    bottom: 11px;
+    bottom: 13px;
+
+    @include pc {
+        bottom: 65px;
+        width: 225px;
+        height: 225px;
+    }
 
     @include mobile {
         display: none;
