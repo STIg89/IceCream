@@ -141,6 +141,49 @@
         transform: scale(1.2);
     }
 }
+
+.hero__number-wraper {
+    position: absolute;
+    right: 0;
+    bottom: 205px;
+    @include flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    
+    @include mobile {
+        display: none;
+    }
+
+    @include pc {
+        bottom: 367px;
+        gap: 16px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-end;
+    }
+}
+.hero__number {
+    @include font (900, 28, 34, 0.04);
+    text-transform: uppercase;
+    color: var(--blackText);
+
+    @include pc {
+        @include font (900, 46, 56, 0.04);
+    }
+}
+.hero__after-namber {
+    @include font (400, 8, 10, 0);
+    color: var(--whiteText);
+
+    @include pc {
+        @include font (400, 14, 17, 0.04);
+    }
+}
 .hero__img-wraper {
     flex-grow: 1;
     height: 329px;
