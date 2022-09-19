@@ -1,36 +1,57 @@
 @mixin miniMobile {
-    @media screen and (max-width: 480px) {
-        @content;
-    }
+  @media screen and (max-width: 480px) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media screen and (max-width: 767px) {
-        @content;
-    }
+  @media screen and (max-width: 767px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin pc {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin visibilityHidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+@mixin font-box($fw, $fs, $lh, $ls: 0.04em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
 }

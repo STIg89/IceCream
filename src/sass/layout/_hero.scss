@@ -5,14 +5,16 @@
 .hero__container {
     display: flex;
     flex-direction: column;
-    min-height: 504px;
+    // height: 504px;
+    position: relative;
 }
 .hero__content-wraper {
-    // padding: 49px 0 239px 0;
+    padding: 49px 0 20px;
 }
 .container {
 }
 .hero__title {
+    margin-bottom: 32px;
 }
 .title {
 }
@@ -26,10 +28,12 @@
 }
 .hero__img-wraper {
     flex-grow: 1;
-    position: relative;
+    height: 329px;
     max-width: 480px;
-    // height: 100%;
-    // padding-top: 230px;
+
+    @include miniMobile {
+        height: 68.44vw;
+    }
 }
 .hero__img-dots {
     position: absolute;
@@ -40,18 +44,14 @@
 
     // margin: 0 auto;
     position: absolute;
-    left: 56%;
-    bottom: 20px;
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%, 0%);
+    width: 480px;
+    pointer-events: none;
     @include miniMobile {
     bottom: -16vw;
-    }
-    transform: translate(-50%, 0%);
-    height: auto;
-    // right: 0;
-    // left: 27px;
-
-    @include miniMobile {
-        // width: 86.25vw;
+    width: 100vw;
     }
 }
 .hero__img-plate {
