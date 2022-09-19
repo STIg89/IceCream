@@ -6,31 +6,52 @@
                 <use href="./images/sprite.svg#icon-Logo-icecream"></use>
             </svg>
         </a>
-        <button class="header-button" type="button">
+
+        <nav class="header-nav">
+            <ul class="header-list list">
+                <li class="header-item item">
+                    <a class="header-link link current" href="">Home</a>
+                </li>
+                <li class="header-item item">
+                    <a class="header-link link" href="">How it’s made?</a>
+                </li>
+                <li class="header-item item">
+                    <a class="header-link link" href="">Our products</a>
+                </li>
+                <li class="header-item item">
+                    <a class="header-link link" href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button type="button" class="header-button" by-data-modal-open>Buy now
+            <svg width="12" height="12" class="menu-button-icon">
+                <use href="./images/sprite.svg#icon-arrow-short"></use>
+            </svg>
+        </button>
+
+        <!-- Мобильное меню -->
+        <button class="menu-button-open" type="button">
             <svg width="20" height="12">
                 <use href="./images/sprite.svg#icon-Burger"></use>
             </svg>
         </button>
         </div>
     </div>
-
-    <!-- Мобильное меню -->
     <div class="menu-mobile is-hidden">
         <div class="menu-container">
             <div>
-            <div class="header-top">
-            <svg width="41" height="37">
-                <use href="./images/sprite.svg#icon-Logo-icecream"></use>
-            </svg>
-                <button class="header-button" type="button">
-                    <svg class="header-button-svg" width="20" height="20">
-                        <use href="./images/sprite.svg#icon-icon-close"></use>
+                <div class="menu-top">
+                    <svg width="41" height="37">
+                    <use href="./images/sprite.svg#icon-Logo-icecream"></use>
                     </svg>
-                </button>
-            </div>
-                
-            
-            <nav class="mobile-menu-nav">
+                    <button class="menu-button-close" type="button">
+                        <svg class="menu-button-svg" width="20" height="20">
+                            <use href="./images/sprite.svg#icon-icon-close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-menu-nav">
                     <ul class="mobile-menu-list list">
                         <li class="mobile-menu-item item">
                             <a class="mobile-menu-link link current" href="">Home</a>
@@ -45,14 +66,11 @@
                             <a class="mobile-menu-link link" href="">Contact</a>
                         </li>
                     </ul>
-            </nav>
+                </nav>
             </div>
-        
-
-
-
-            <button type="button" class="menu-button" by-data-modal-open>Buy now ></button>
-            
+        <button type="button" class="menu-button" by-data-modal-open>Buy now
+            <svg width="12" height="12" class="menu-button-icon"><use href="./images/sprite.svg#icon-arrow-short"></use></svg>
+        </button>
         </div>
     </div>
 </header>
