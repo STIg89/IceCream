@@ -15,14 +15,14 @@
       pointer-events: none;
     }
   
-    &.is-hidden .franchise-modal {
+    &.is-hidden .read__modal {
       transform: translate(-50%, -50%) scale(0.9);
     }
   }
   
   .read__modal {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--cubic);
@@ -31,41 +31,36 @@
     border: 2px solid var(--yellowText);
     border-radius: 10px;
     padding: 28px;
-    max-width: 280px;
-    @include tablet {
-      top: 55%;
       max-width: 568px;
       padding: 32px 60px;
-    }   
     &__close-button {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 20px;
+        right: 20px;
       background-color: transparent;
       color: #131313;
       fill: currentColor;
       border-color: transparent;
-      @include tablet {
-        top: 20px;
-        right: 20px;
-      }
       &:hover,
       &:focus {
         color: var(--BTN);
       }
     }   
     &__title {
-      @include font-box(400, 16px, 1.5, null);
       color: var(--blackText);
       text-align: center;
-      margin-bottom: 20px;
-      @include tablet {
         @include font-box(null, 20px, 1.4, null);
-        max-width: 322px;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 24px;
-      }
-    }      
+    } 
+        &__svg {
+            width: 20px;
+            height: 20px;
+        }
+    
+        &__descr {
+          @include font-box(400, 16px, 1.4, null);
+          color: var(--blackText);
+          margin-bottom: 24px;
+        }
   }
   
