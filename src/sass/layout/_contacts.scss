@@ -14,7 +14,6 @@
 .contacts__item {
   width: 100%;
   max-width: calc(480px - 40px);
-  min-width: 320px;
   padding: 40px 32px;
   margin-bottom: 20px;
   background-color: var(--whiteText);
@@ -123,6 +122,11 @@
   &__link {
     @include font-box(500, 12px, 1.5, null);
     color: var(--blackText);
+    transition: color var(--duration) var(--cubic);
+    &:hover,
+      &:focus {
+        color: var(--milkshakes);
+      }
     @include tablet {
       font-size: 14px;
     }
@@ -143,6 +147,9 @@
   @include font-box(600, 14px, 1.29, null);
   color: var(--blackText);
   fill: currentColor;
+  transition: color var(--duration) var(--cubic),
+  background-color var(--duration) var(--cubic),
+  border-color var(--duration) var(--cubic);
   &:hover,
   &:hover .contacts__button--arrow {
     background-color: var(--accentBTN);
@@ -160,6 +167,9 @@
   &--franchise {
     background-color: transparent;
     border: 2px solid var(--BTN);
+    transition: color var(--duration) var(--cubic),
+    border-color var(--duration) var(--cubic),
+    background-color var(--duration) var(--cubic);
     &:hover,
     &:hover .contacts__button--arrow {
       background-color: transparent;
