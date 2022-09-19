@@ -1,22 +1,27 @@
 .bg-wrapper { 
-    background-color: #FCFCFC;
-    background-image: url('../images/ice-cream-bg-mob.png');
-    background-position: top 100px left 0px;
+    position: relative;
+    top: -24px;
+    background-image: url('../images/ice-cream-bg-mob.png'), linear-gradient(#FCFCFC, #FCFCFC);
+    background-position: top 100px left 0, top 24px left 0;
     background-repeat: no-repeat;
+    background-size: auto auto, 100% 1070px;
     @include retina {
-      background-image: url('../images/ice-cream-bg-mob-2x.png');
+      background-image: url('../images/ice-cream-bg-mob-2x.png'), linear-gradient(#FCFCFC, #FCFCFC);
     }
     @include tablet {
-        background-position: top 100px left 0;
-      background-image: url('../images/ice-cream-bg-tab.png');
+      background-image: url('../images/ice-cream-bg-tab.png'), linear-gradient(#FCFCFC, #FCFCFC);
+      background-position: top 163px left 0, top 163px left 0;
+      background-size: auto auto, 100% 958px;
       @include retina {
-        background-image: url('../images/ice-cream-bg-tab-2x.png');
+        background-image: url('../images/ice-cream-bg-tab-2x.png'), linear-gradient(#FCFCFC, #FCFCFC);
       }
     }
     @include pc {
-      background-image: url('../images/ice-cream-bg-desk.png');
+      background-image: url('../images/ice-cream-bg-desk.png'), linear-gradient(#FCFCFC, #FCFCFC);
+      background-position: top 95px left 0, top 95px left 0;
+      background-size: auto auto, 100% 1118px;
       @include retina {
-        background-image: url('../images/ice-cream-bg-desk-2x.png');
+        background-image: url('../images/ice-cream-bg-desk-2x.png'), linear-gradient(#FCFCFC, #FCFCFC);
       }
     }
 }
@@ -50,10 +55,7 @@
         margin-right: auto;
     }
     &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        @include flex;       
         height: 256px;
 
         background: #84A178;
@@ -67,10 +69,8 @@
         }
     }
     &__text {
-        font-size: 12px;
-        line-height: 255%;
+        @include font-box (null, 12px, 255%, 0.04em);
         text-align: center;
-        letter-spacing: 0.04em;
         color: #FCFCFC;
         @include tablet { 
             font-weight: 500;
@@ -83,9 +83,8 @@
     }
     &__text-author {
         margin-bottom: 14px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 186%;
+
+        @include font-box (500, 20px, 186%, 0.04em);
         text-align: center;
         color: #131313;
         @include tablet { 
