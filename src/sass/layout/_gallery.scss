@@ -33,8 +33,11 @@
     // height: 130px;
 }
 
-.child_div_first {
+.child_div_first,
+.child_div_second,
+.child_div_third {
     // height: 100%;
+    border-radius: 24px;
 }
 
 .image-slider__image {
@@ -57,6 +60,78 @@
 .image_one {
     height: 100%;
     width: 100%;
+}
+
+.image_one {
+    background-image: url(./images/ice_cream_first_slide_mobile.jpg);
+
+    @include retina {
+        background-image: url(./images/ice_cream_first_slide_mobile_2x.jpg);
+    }
+
+    @include tablet {
+        background-image: url(./images/ice_cream_first_slide_tablet.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_first_slide_tablet_2x.jpg);
+        }
+    }
+
+    @include pc {
+        background-image: url(./images/ice_cream_first_slide.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_first_slide_2x.jpg);
+        }
+    }
+}
+
+.image_two {
+    background-image: url(./images/ice_cream_second_slide_mobile.jpg);
+
+    @include retina {
+        background-image: url(./images/ice_cream_second_slide_mobile_2x.jpg);
+    }
+
+    @include tablet {
+        background-image: url(./images/ice_cream_second_slide_tablet.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_second_slide_tablet_2x.jpg);
+        }
+    }
+
+    @include pc {
+        background-image: url(./images/ice_cream_second_slide.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_second_slide_2x.jpg);
+        }
+    }
+}
+
+.image_three {
+    background-image: url(./images/ice_cream_third_slide_mobile.jpg);
+
+    @include retina {
+        background-image: url(./images/ice_cream_third_slide_mobile_2x.jpg);
+    }
+
+    @include tablet {
+        background-image: url(./images/ice_cream_third_slide_tablet.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_second_slide_tablet_2x.jpg);
+        }
+    }
+
+    @include pc {
+        background-image: url(./images/ice_cream_third_slide.jpg);
+
+        @include retina {
+            background-image: url(./images/ice_cream_third_slide_2x.jpg);
+        }
+    }
 }
 
 .div_for_image {
