@@ -1,6 +1,29 @@
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-image: url(../images/bg-products-mob-1x.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  @include retina {
+    background-image: url(../images/bg-products-mob-2x.jpg);
+  }
+  @include tablet {
+    background-image: url(../images/bg-products-tab-1x.jpg);
+    @include retina {
+      background-image: url(../images/bg-products-tab-2x.jpg);
+    }
+    padding-bottom: 82px;
+    // background-size: contain;
+  }
+  @include pc {
+    padding-bottom: 66px;
+    background-image: url(../images/bg-products-desk-1x.jpg);
+    @include retina {
+      background-image: url(../images/bg-products-desk-2x.jpg);
+    }
+  }
 }
 .products__pre-title {
   font-weight: 800;
@@ -9,6 +32,12 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 12px;
+  @include tablet {
+    font-size: 22px;
+  }
+  @include pc {
+    font-size: 30px;
+  }
 }
 .products__title {
   font-size: 30px;
@@ -17,18 +46,31 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 148px;
+  @include tablet {
+    font-size: 34px;
+    margin-bottom: 200px;
+  }
+  @include pc {
+    font-size: 36px;
+    margin-bottom: 302px;
+  }
 }
 .products-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 164px 32px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
 }
 .products-list__item {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   height: 420px;
-  max-width: 280px;
+  width: 280px;
   padding: 123px 40px 14px 40px;
   border-radius: 24px;
   &:first-child {
@@ -40,6 +82,72 @@
   &:last-child {
     background-color: var(--milkshakes);
   }
+  &::before {
+    position: absolute;
+    content: '';
+    top: -28%;
+    width: 200px;
+    height: 200px;
+    background-color: var(--modalBG);
+    border-radius: 50%;
+    @include tablet {
+      left: 12px;
+    }
+    @include pc {
+      width: 300px;
+      height: 300px;
+      top: -35%;
+      left: 34px;
+    }
+  }
+  @include mobile {
+    &:not(:last-child) {
+      margin-bottom: 164px;
+    }
+  }
+  @include tablet {
+    height: 428px;
+    width: calc((100% - 32px) / 3);
+    padding-top: 108px;
+    padding-left: 26px;
+    padding-right: 26px;
+    // margin-left: 0;
+    // margin-right: 0;
+  }
+  @include pc {
+    height: 536px;
+    width: calc((100% - 64px) / 3);
+    padding-top: 166px;
+    padding-left: 62px;
+    padding-right: 62px;
+    padding-bottom: 60px;
+  }
+}
+.products-list__item:first-child:before {
+  background-image: url(../images/product-1-mob-tab-1x.jpg);
+  box-shadow: 0px 12px 0px 0px rgba(205, 225, 197, 0.53),
+    0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  background-size: cover;
+  @include retina {
+    background-image: url(../images/product-1-mob-tab-2x.jpg);
+  }
+}
+.products-list__item:nth-child(2):before {
+  background-image: url(../images/product-2-mob-tab-1x.jpg);
+  box-shadow: 0 12px #fff0be87, 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  background-size: cover;
+  @include retina {
+    background-image: url(../images/product-2-mob-tab-2x.jpg);
+  }
+}
+.products-list__item:last-child:before {
+  background-image: url(../images/product-3-desk-1x.jpg);
+  box-shadow: 0px 12px 0px 0px #f9a576b2,
+    0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  @include retina {
+    background-image: url(../images/product-3-desk-2x.jpg);
+  }
 }
 .products-list__title {
   font-weight: 700;
@@ -49,6 +157,13 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 40px;
+  @include tablet {
+    font-size: 22px;
+  }
+  @include pc {
+    font-size: 30px;
+    margin-bottom: 65px;
+  }
 }
 .products-list__text {
   margin-right: auto;
@@ -58,9 +173,12 @@
   text-align: center;
   letter-spacing: 0.04em;
   margin-bottom: auto;
+  @include pc {
+    font-size: 16px;
+  }
 }
 .products-list__button {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
