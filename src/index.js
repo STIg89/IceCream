@@ -1,3 +1,4 @@
+import './js/menu';
 import './js/by-now-modal';
 import './js/modal-icecream';
 import './js/modal-coffee';
