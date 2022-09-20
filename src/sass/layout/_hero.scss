@@ -1,4 +1,13 @@
 .hero {
+    padding-top: 61px;
+
+    @include tablet {
+        padding-top: 40px;
+    }
+
+    @include pc {
+        padding-top: 45px;
+    }
 }
 .section {
 }
@@ -9,14 +18,14 @@
     position: relative;
 }
 .hero__content-wraper {
-    padding: 61px 0 20px;
+    margin-bottom: 20px;
     
     @include tablet {
-        padding: 40px 0 32px;
+        margin-bottom: 32px;
     }
 
     @include pc {
-        padding: 45px 0 42px;
+        margin-bottom: 42px;
     }
 }
 .container {
@@ -238,7 +247,7 @@
         bottom: -100px;
     }
     @include miniMobile {
-    bottom: -16vw;
+    bottom: -16.8vw;
     width: 100vw;
 
     

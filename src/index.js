@@ -8,3 +8,4 @@ import './js/modal-milkshake';
 import './js/location-modal';
 import './js/franchise-modal';
 import './js/swiper';
+import './js/smooth-scrolling';
