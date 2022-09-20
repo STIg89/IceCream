@@ -1,76 +1,104 @@
 <header class="header">
-    <div class="container">
-        <div class="header-top">
-        <a class="header-logo link" href="./index.html">
-            <svg width="41" height="37">
-                <use href="./images/sprite.svg#icon-Logo-icecream"></use>
-            </svg>
-        </a>
+  <div class="container">
+    <a class="header-logo-link link" href="./index.html">
+      <svg width="41" height="37">
+        <use href="./images/sprite.svg#icon-Logo-icecream"></use>
+      </svg>
+    </a>
+    <button
+      type="button"
+      class="mobile_menu-btn"
+      data-menu-open
+      aria-label="відкрити меню"
+    >
+      <svg width="20" height="12">
+        <use href="./images/sprite.svg#icon-Burger"></use>
+      </svg>
+    </button>
 
-        <nav class="header-nav">
-            <ul class="header-list list">
-                <li class="header-item item">
-                    <a class="header-link link current" href="">Home</a>
-                </li>
-                <li class="header-item item">
-                    <a class="header-link link" href="">How it’s made?</a>
-                </li>
-                <li class="header-item item">
-                    <a class="header-link link" href="">Our products</a>
-                </li>
-                <li class="header-item item">
-                    <a class="header-link link" href="">Contact</a>
-                </li>
-            </ul>
-        </nav>
+    <button type="button" class="tablet_menu-btn" tablet-menu-open aria-label="відкрити меню">
+        <svg width="20" height="12">
+            <use href="./images/sprite.svg#icon-Burger"></use>
+        </svg>
+    </button>
 
-        <button type="button" class="header-button" by-data-modal-open>Buy now
+    <div
+      class="header__menu header__mobile-menu header__mobile-menu--is-hidden"
+      data-menu
+    >
+      <!-- <button type="button" class="header-button" by-data-modal-open>Buy now
             <svg width="12" height="12" class="menu-button-icon">
                 <use href="./images/sprite.svg#icon-arrow-short"></use>
             </svg>
+            </button> -->
+
+      <!-- Мобильное меню -->
+
+      <nav class="mobile-menu-nav">
+        <a class="header-logo link header-logo-menu" href="./index.html">
+          <svg width="41" height="37">
+            <use href="./images/sprite.svg#icon-Logo-icecream"></use>
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          class="mobile_menu-btn--close btn"
+          data-menu-close
+          aria-label="закрити меню"
+        >
+          <svg class="menu-button-svg" width="32" height="32">
+            <use href="./images/sprite.svg#icon-icon-close"></use>
+          </svg>
         </button>
 
-        <!-- Мобильное меню -->
-        <button class="menu-button-open" type="button">
-            <svg width="20" height="12">
-                <use href="./images/sprite.svg#icon-Burger"></use>
-            </svg>
-        </button>
-        </div>
+        <ul class="mobile-menu-list list">
+          <li class="mobile-menu-item item">
+            <a class="mobile-menu-link link current" href="">Home</a>
+          </li>
+          <li class="mobile-menu-item item">
+            <a class="mobile-menu-link link" href="">How it’s made?</a>
+          </li>
+          <li class="mobile-menu-item item">
+            <a class="mobile-menu-link link" href="">Our products</a>
+          </li>
+          <li class="mobile-menu-item item">
+            <a class="mobile-menu-link link" href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button type="button" class="menu-button" by-data-modal-open>
+        Buy now
+        <svg width="12" height="12" class="menu-button-icon">
+          <use href="./images/sprite.svg#icon-arrow-short"></use>
+        </svg>
+      </button>
     </div>
-    <div class="menu-mobile is-hidden">
-        <div class="menu-container">
-            <div>
-                <div class="menu-top">
-                    <svg width="41" height="37">
-                    <use href="./images/sprite.svg#icon-Logo-icecream"></use>
-                    </svg>
-                    <button class="menu-button-close" type="button">
-                        <svg class="menu-button-svg" width="20" height="20">
-                            <use href="./images/sprite.svg#icon-icon-close"></use>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="mobile-menu-nav">
-                    <ul class="mobile-menu-list list">
-                        <li class="mobile-menu-item item">
-                            <a class="mobile-menu-link link current" href="">Home</a>
-                        </li>
-                        <li class="mobile-menu-item item">
-                            <a class="mobile-menu-link link" href="">How it’s made?</a>
-                        </li>
-                        <li class="mobile-menu-item item">
-                            <a class="mobile-menu-link link" href="">Our products</a>
-                        </li>
-                        <li class="mobile-menu-item item">
-                            <a class="mobile-menu-link link" href="">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        <button type="button" class="menu-button" by-data-modal-open>Buy now
-            <svg width="12" height="12" class="menu-button-icon"><use href="./images/sprite.svg#icon-arrow-short"></use></svg>
-        </button>
-        </div>
-    </div>
+  </div>
+
+  <div class="header__nav-menu header__nav-menu--is-hidden" tablet-menu>
+    <button type="button" class="tablet_menu-btn--close btn" tablet-menu-close aria-label="закрити меню">
+        <svg class="menu-button-svg" width="32" height="32">
+            <use href="./images/sprite.svg#icon-icon-close"></use>
+        </svg>
+    </button>
+
+  <nav class="header-nav">
+    <ul class="header-list list">
+      <li class="header-item item">
+        <a class="header-link link current" href="">Home</a>
+      </li>
+      <li class="header-item item">
+        <a class="header-link link" href="">How it’s made?</a>
+      </li>
+      <li class="header-item item">
+        <a class="header-link link" href="">Our products</a>
+      </li>
+      <li class="header-item item">
+        <a class="header-link link" href="">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 </header>

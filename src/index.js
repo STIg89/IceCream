@@ -1,4 +1,5 @@
 import './js/menu';
+import './js/menu2';
 import './js/by-now-modal';
 import './js/read-more-modal';
 import './js/modal-icecream';
