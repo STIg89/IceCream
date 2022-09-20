@@ -60,7 +60,6 @@
         &__descr {
           @include font-box(400, 16px, 1.4, null);
           color: var(--blackText);
-          margin-bottom: 24px;
         }
   }
   
