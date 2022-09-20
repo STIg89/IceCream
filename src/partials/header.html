@@ -1,8 +1,8 @@
 <header class="header">
-  <div class="container">
+  <div class="container header-container">
     <a class="header-logo-link link" href="./index.html">
-      <svg width="41" height="37">
-        <use href="./images/sprite.svg#icon-Logo-icecream"></use>
+      <svg  class="header-logo-svg">
+        <use href="./images/sprite.svg#icon-icecream"></use>
       </svg>
     </a>
     <button
@@ -16,7 +16,7 @@
       </svg>
     </button>
 
-    <button type="button" class="tablet_menu-btn" tablet-menu-open aria-label="відкрити меню">
+    <button type="button" class="tablet_menu-btn" tablet-menu-open aria-label="Open menu">
         <svg width="20" height="12">
             <use href="./images/sprite.svg#icon-Burger"></use>
         </svg>
@@ -36,8 +36,8 @@
 
       <nav class="mobile-menu-nav">
         <a class="header-logo link header-logo-menu" href="./index.html">
-          <svg width="41" height="37">
-            <use href="./images/sprite.svg#icon-Logo-icecream"></use>
+          <svg class="header-logo-svg">
+            <use href="./images/sprite.svg#icon-icecream"></use>
           </svg>
         </a>
 
@@ -54,16 +54,16 @@
 
         <ul class="mobile-menu-list list">
           <li class="mobile-menu-item item">
-            <a class="mobile-menu-link link current" href="">Home</a>
+            <a class="mobile-menu-link link current" href="./index.html">Home</a>
           </li>
           <li class="mobile-menu-item item">
-            <a class="mobile-menu-link link" href="">How it’s made?</a>
+            <a class="mobile-menu-link link" href="#about">How it’s made?</a>
           </li>
           <li class="mobile-menu-item item">
-            <a class="mobile-menu-link link" href="">Our products</a>
+            <a class="mobile-menu-link link" href="#products">Our products</a>
           </li>
           <li class="mobile-menu-item item">
-            <a class="mobile-menu-link link" href="">Contact</a>
+            <a class="mobile-menu-link link" href="#contacts">Contact</a>
           </li>
         </ul>
       </nav>
@@ -78,7 +78,12 @@
   </div>
 
   <div class="header__nav-menu header__nav-menu--is-hidden" tablet-menu>
-    <button type="button" class="tablet_menu-btn--close btn" tablet-menu-close aria-label="закрити меню">
+    <a class="tablet-logo-link link" href="./index.html">
+      <svg class="header-logo-svg">
+        <use href="./images/sprite.svg#icon-icecream"></use>
+      </svg>
+    </a>
+    <button type="button" class="tablet_menu-btn--close btn" tablet-menu-close aria-label="Close menu">
         <svg class="menu-button-svg" width="32" height="32">
             <use href="./images/sprite.svg#icon-icon-close"></use>
         </svg>
@@ -87,16 +92,16 @@
   <nav class="header-nav">
     <ul class="header-list list">
       <li class="header-item item">
-        <a class="header-link link current" href="">Home</a>
+        <a class="header-link link current" href="./index.html">Home</a>
       </li>
       <li class="header-item item">
-        <a class="header-link link" href="">How it’s made?</a>
+        <a class="header-link link" href="#about">How it’s made?</a>
       </li>
       <li class="header-item item">
-        <a class="header-link link" href="">Our products</a>
+        <a class="header-link link" href="#products">Our products</a>
       </li>
       <li class="header-item item">
-        <a class="header-link link" href="">Contact</a>
+        <a class="header-link link" href="#contacts">Contact</a>
       </li>
     </ul>
   </nav>
