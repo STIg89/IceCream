@@ -45,7 +45,7 @@
 .about_form_button {
     padding: 12px 34px;
     text-align: center;
-    color: #131313;
+    color: var(--blackText);
     background-color: #f8d24e;
     border: none;
     border-radius: 10px;
@@ -56,7 +56,7 @@
 }
     
 .about_form_button:hover, .about_form_button:focus {
-    color: #131313;
+    color: var(--blackText);
     background-color: #0A8817;
     border-radius: 10px; ;
 } 
@@ -197,8 +197,8 @@
 .about_form_button {
     height: 42px;
     text-align: center;
-    color: #131313;
-    background-color: #f8d24e;
+    color: var(--blackText);
+    background-color: var(--yellowTex);
     border: none;
     border-radius: 10px;
     justify-content: center;
@@ -216,7 +216,7 @@
 }
        
 .about_form_button:hover, .about_form_button:focus {
-    color: #131313;
+    color: var(--blackText);
     background-color: #0A8817;
     border-radius: 10px; ;     
 } 
