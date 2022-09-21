@@ -203,6 +203,10 @@
     color: var(--blackText);
     margin-bottom: 11px;
   }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form {
@@ -215,8 +219,22 @@
     padding-right: 60px;
   }
 
+  &__label {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__input:hover,
+  &__input:focus,
+  &__textarea:hover,
+  &__textarea:focus {
+    outline: 2px solid var(--accentBTN);
+    border-color: var(--accentBTN);
+  }
+
   &__input,
   &__textarea {
+    display: block;
     width: 100%;
     border: 1px solid var(--mainBG);
     border-radius: 10px;
@@ -235,7 +253,7 @@
 
   &__input {
     height: 42px;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
 
   &__textarea {
