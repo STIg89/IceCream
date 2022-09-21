@@ -253,6 +253,37 @@
     
     }
 }
+
+.hero__img-iceCream-wink { 
+        // margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        bottom: -80px;
+        transform: translate(-50%, 0%);
+        width: 480px;
+        pointer-events: none;
+        
+        @include tablet {
+            left: 555px;
+            bottom: -57px;
+            width: auto;
+        }
+    
+        @include pc {
+            left: 880px;
+            bottom: -100px;
+        }
+        @include miniMobile {
+        bottom: -16.8vw;
+        width: 100vw;
+    
+        
+        }
+}
+// .hero__img-iceCream:hover { 
+//     background-image: url();
+// }
+
 .hero__img-plate {
     position: absolute;
     bottom: 13px;
