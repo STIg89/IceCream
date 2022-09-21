@@ -12,9 +12,11 @@
     margin-top: 86px;
   }
   
+  @include miniMobile {
   .swiper-wrapper {
     width: calc(100vw - 40px);
   }
+}
 }
 
 
