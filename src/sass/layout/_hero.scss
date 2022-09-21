@@ -9,8 +9,6 @@
         padding-top: 45px;
     }
 }
-.section {
-}
 .hero__container {
     display: flex;
     flex-direction: column;
@@ -27,8 +25,6 @@
     @include pc {
         margin-bottom: 42px;
     }
-}
-.container {
 }
 .hero__title {
     @include font (400, 26, 33, 0);
@@ -61,8 +57,6 @@
         }
     }
 }
-.title {
-}
 
 .hero__btn-wraper {
     display: flex;
@@ -91,10 +85,6 @@
         width: 134px;
         height: 42px;
     }
-}
-.link {
-}
-.btn {
 }
 .hero__link {
     text-decoration: underline;
@@ -153,7 +143,7 @@
 
 .hero__number-wraper {
     position: absolute;
-    right: 0;
+    right: 32px;
     bottom: 205px;
     @include flex;
     flex-direction: column;
@@ -167,6 +157,7 @@
     @include pc {
         bottom: 367px;
         gap: 16px;
+        right: 16px;
     }
 
     div {
@@ -249,34 +240,24 @@
     @include miniMobile {
     bottom: -16.8vw;
     width: 100vw;
-
-    
     }
 }
 
 .hero__img-iceCream-wink { 
         // margin: 0 auto;
         position: absolute;
-        bottom: -90px;
-        left: 55%;
+        bottom: -57px;
+        left: 555px;
         transform: translate(-50%, 0%);
-        width: 480px;
+        width: auto;
         pointer-events: none;
-        
-        @include tablet {
-            left: 555px;
-            bottom: -57px;
-            width: auto;
-        }
     
         @include pc {
             left: 892px;
             bottom: -100px;
         }
-        @include miniMobile {
-        bottom: -16.8vw;
-        width: 100vw;
-        left: 55%;
+        @include mobile {
+        display: none;
     
         
         }
