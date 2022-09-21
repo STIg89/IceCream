@@ -76,12 +76,24 @@
 .image_one {
     background-image: url(../images/ice_cream_first_slide_mobile.jpg);
 
+    @include retina {
+        background-image: url(../images/ice_cream_first_slide_mobile_2x.jpg);
+    }
+
     @include tablet {
         background-image: url(../images/ice_cream_first_slide_tablet.jpg);
+
+        @include retina {
+            background-image: url(../images/ice_cream_first_slide_tablet_2x.jpg);
+        }
     }
 
     @include pc {
         background-image: url(../images/ice_cream_first_slide.jpg);
+
+        @include retina {
+            background-image: url(../images/ice_cream_first_slide_2x.jpg);
+        }
     }
 }
 
