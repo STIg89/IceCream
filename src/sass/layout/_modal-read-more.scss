@@ -4,7 +4,7 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     opacity: 1;
     transition: opacity 250ms var(--cubic);
     background-color: rgba(0, 0, 0, 0.2);
@@ -60,7 +60,13 @@
         &__descr {
           @include font-box(400, 16px, 1.4, null);
           color: var(--blackText);
-          margin-bottom: 24px;
+         
         }
   }
-  
+
+  .read-modal__video { 
+    width: 448px;
+    height: 205px;
+    margin-bottom: 32px;
+    border-radius: 10px;
+  }
