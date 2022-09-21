@@ -11,7 +11,12 @@
   @include pc {
     margin-top: 86px;
   }
+  
+  .swiper-wrapper {
+    width: calc(100vw - 40px);
+  }
 }
+
 
 .swiper-container {
   max-width: 100%;
