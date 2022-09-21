@@ -276,6 +276,12 @@
             top: 24px;
             right: 32px;
         }
+
+        @include pc {
+            position: unset;
+            margin-top: 24px;
+            margin-right: inherit;
+        }
     }
     &-mobile {
         display: block;
