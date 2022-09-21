@@ -3,7 +3,7 @@
   padding-bottom: 60px;
   background-image: url(../images/bg-products-mob-1x.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   max-width: 1600px;
   @include retina {

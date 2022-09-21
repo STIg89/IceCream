@@ -1,27 +1,32 @@
 .bg-wrapper {
-    background-color: #FCFCFC;
-    background-image: url('../images/ice-cream-bg-mob.png');
-    background-position: top 100px left 0px;
+    position: relative;
+    top: -24px;
+    background-image: url(../images/bg-products-mob-1x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
+    background-position: top 100px center, top 24px left 0;
     background-repeat: no-repeat;
+    background-size: 100% auto, auto 1070px;
 
     @include retina {
-        background-image: url('../images/ice-cream-bg-mob-2x.png');
+        background-image: url(../images/bg-products-mob-2x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
     }
 
     @include tablet {
-        background-position: top 100px left 0;
-        background-image: url('../images/ice-cream-bg-tab.png');
+        background-image: url(../images/bg-products-tab-1x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
+      background-position: top 163px center, top 163px left 0;
+      background-size: auto 958px, 100% 958px;
 
         @include retina {
-            background-image: url('../images/ice-cream-bg-tab-2x.png');
+            background-image: url(../images/bg-products-tab-2x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
         }
     }
 
     @include pc {
-        background-image: url('../images/ice-cream-bg-desk.png');
+        background-image: url(../images/bg-products-desk-1x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
+      background-position: top 95px center, top 95px left 0;
+      background-size: auto 1118px, 100% 1118px;
 
         @include retina {
-            background-image: url('../images/ice-cream-bg-desk-2x.png');
+            background-image: url(../images/bg-products-desk-2x.jpg), linear-gradient(#FCFCFC, #FCFCFC);
         }
     }
 }
@@ -43,8 +48,15 @@
 
 
 .customer-reviews {
-    padding-top: 128px;
+    padding-top: 80px;
     padding-bottom: 100px;
+
+    @include tablet{ 
+        padding-top: 60px;
+    }
+    @include pc { 
+        padding-top: 60px;
+    }
 
     &__title {
         @include visibilityHidden;
