@@ -261,7 +261,7 @@
         left: 55%;
         transform: translate(-50%, 0%);
         width: 480px;
-        // pointer-events: none;
+        pointer-events: none;
         
         @include tablet {
             left: 555px;
@@ -285,7 +285,7 @@
     opacity: 0;
     transition: opacity var(--duration) var(--cubic);
 }
-.hero__img-iceCream-wink:hover { 
+.hero__container:hover .hero__img-iceCream-wink { 
     opacity: 1;
 }
 
