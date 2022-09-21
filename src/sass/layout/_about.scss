@@ -33,7 +33,7 @@
        text-align: center;
        letter-spacing: 0.04em;
        text-transform: uppercase;
-       color: #FCFCFC;
+       color: var( --whiteText);
        margin-bottom: 12px;
        
    }
@@ -140,7 +140,7 @@
            }
    }
    
-   .about__image-wraper {
+.about__image-wraper {
        margin: 0;
        margin-right: 100px;
        @include tablet {
@@ -149,5 +149,5 @@
        @include mobile {
            margin: 0; 
        }
-   }
+}
    
