@@ -185,7 +185,7 @@
         @include font (900, 46, 56, 0.04);
     }
 }
-.hero__after-namber {
+.hero__after-number {
     @include font (400, 8, 10, 0);
     color: var(--whiteText);
 
@@ -253,6 +253,42 @@
     
     }
 }
+
+.hero__img-iceCream-wink { 
+        // margin: 0 auto;
+        position: absolute;
+        bottom: -90px;
+        left: 55%;
+        transform: translate(-50%, 0%);
+        width: 480px;
+        pointer-events: none;
+        
+        @include tablet {
+            left: 555px;
+            bottom: -57px;
+            width: auto;
+        }
+    
+        @include pc {
+            left: 892px;
+            bottom: -100px;
+        }
+        @include miniMobile {
+        bottom: -16.8vw;
+        width: 100vw;
+        left: 55%;
+    
+        
+        }
+}
+.hero__img-iceCream-wink { 
+    opacity: 0;
+    transition: opacity var(--duration) var(--cubic);
+}
+.hero__container:hover .hero__img-iceCream-wink { 
+    opacity: 1;
+}
+
 .hero__img-plate {
     position: absolute;
     bottom: 13px;
