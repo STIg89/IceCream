@@ -1,21 +1,49 @@
 .footer {
-  @include mobile {
-    margin-top: 40px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 120px;
+    background-color: #e1e1e1;
+
+    @include tablet {
+      bottom: 56px;
+    }
+
+    @include pc {
+      bottom: 45px;
+    }
   }
+
+  @include mobile {
+    padding-bottom: 62px;
+  }
+
   @include pc {
-    margin-top: 120px;
+    padding-top: 120px;
   }
 }
 
 .footer__wrap {
   @include tablet {
     display: flex;
-    margin-bottom: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 13px;
   }
 
   @include pc {
-    margin-bottom: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 11px;
   }
+}
+
+.footer__description {
+  margin-bottom: 42px;
 }
 
 .footer__slogan-first {
@@ -45,7 +73,6 @@
 }
 
 .footer__slogan-second {
-  margin-bottom: 42px;
   font-weight: 700;
   font-size: 34px;
   line-height: 41px;
@@ -73,6 +100,7 @@
 }
 
 .footer__soc-contact {
+  margin-bottom: 56px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -83,6 +111,8 @@
   }
 
   @include pc {
+    margin-left: 370px;
+    margin-bottom: 66px;
     padding-bottom: 0px;
   }
 }
@@ -137,8 +167,6 @@
 }
 
 .footer__contact {
-  margin-bottom: 40px;
-
   @include tablet {
     margin-bottom: 0px;
   }
@@ -159,16 +187,19 @@
 .tel__text--color {
   margin-left: 5px;
   color: var(--whiteText);
+
+  &:hover,
+  &:focus {
+    color: var(--BTN);
+  }
 }
 
 .footer__underline {
-  border-top: 1px solid #e1e1e1;
+  margin: 0 auto;
 }
 
 .footer__text-underline {
   margin: auto;
-  padding-top: 16px;
-  padding-bottom: 18px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
