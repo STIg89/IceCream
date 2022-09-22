@@ -1,0 +1,16 @@
+.upscroll {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+.upscroll__link {
+}
+.link {
+}
+.upscroll__icon {
+    opacity: .6;
+}
