@@ -22,7 +22,7 @@
 
 .by-now__modal {
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--cubic);
@@ -34,19 +34,26 @@
   max-width: 280px;
 
   @include tablet {
-    // top: 55%;
+    top: 50%;
     max-width: 568px;
     padding: 20px 20px 32px;
   }
 }
 
 .buy-now-modal-close {
-position: absolute;
-    right: 8px;
+  position: absolute;
+  right: 8px;
   border: none;
   display: block;
   background-color: transparent;
   margin-left: auto;
+
+  &:hover .buy-now-modal-icon-close,
+  &:focus .buy-now-modal-icon-close {
+    fill: #84a178;
+    cursor: pointer;
+  }
+
   @include tablet {
     right: 20px;
   }
@@ -61,33 +68,19 @@ position: absolute;
   }
 }
 
-// .buy-now__pre-title {
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 1.5;
-//     text-align: center;
-//     color: #131313;
-//     margin-bottom: 57px;
-
-//     @include tablet {
-//         font-size: 20px;
-//         line-height: 1.4;
-//     }
-// }
-
 .buy-now__title {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #131313;
   margin-bottom: 57px;
-    margin-top: 20px;
+  margin-top: 20px;
   text-align: center;
 
   @include tablet {
-        margin-top: 12px;
-            margin-bottom: 95px;
-            font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 95px;
+    font-size: 20px;
   }
 }
 
@@ -175,6 +168,14 @@ position: absolute;
   }
 }
 
+.buy-now-list__item:first-child {
+  &:hover,
+  &:focus {
+    background-color: rgba(156, 190, 143, 0.7);
+    cursor: pointer;
+  }
+}
+
 .buy-now-list__item:nth-child(2):before {
   background-color: var(--ice-coffee);
   background-image: url(../images/product-2-mob-tab-1x.jpg);
@@ -191,6 +192,14 @@ position: absolute;
     @include retina {
       background-image: url(../images/product-2-desk-2x.jpg);
     }
+  }
+}
+
+.buy-now-list__item:nth-child(2) {
+  &:hover,
+  &:focus {
+    background-color: rgba(248, 210, 78, 0.7);
+    cursor: pointer;
   }
 }
 
@@ -211,6 +220,14 @@ position: absolute;
     @include retina {
       background-image: url(../images/product-3-desk-2x.jpg);
     }
+  }
+}
+
+.buy-now-list__item:last-child {
+  &:hover,
+  &:focus {
+    background-color: rgba(213, 117, 63, 0.7);
+    cursor: pointer;
   }
 }
 
@@ -241,7 +258,7 @@ position: absolute;
 .modal-input,
 .modal-textarea {
   width: 224px;
-  
+
   padding: 8px 12px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
@@ -254,18 +271,18 @@ position: absolute;
 }
 
 .modal-input {
-    height: 32px;
-    @include tablet {
+  height: 32px;
+  @include tablet {
     height: 42px;
-    }
+  }
 }
 
 .modal-textarea {
-    height: 65px;
+  height: 65px;
 
-    @include tablet {
-        height: 84px;
-    }
+  @include tablet {
+    height: 84px;
+  }
 }
 
 .placeholder {
@@ -275,14 +292,13 @@ position: absolute;
   color: #131313;
   @include tablet {
     font-size: 14px;
-    
   }
 }
 
 .form-button {
   width: 114px;
   height: 42px;
-  background: var(--yellowText);
+  background-color: var(--yellowText);
   border-color: #0000;
   border-radius: 10px;
   margin-left: auto;
@@ -292,7 +308,12 @@ position: absolute;
   line-height: 1.25;
   display: block;
   margin-top: 10px;
-@include tablet {
-        margin-top: 16px
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--accentBTN);
+    cursor: pointer;
+  }
+  @include tablet {
+    margin-top: 16px;
+  }
 }

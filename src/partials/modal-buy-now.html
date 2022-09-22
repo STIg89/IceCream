@@ -1,38 +1,58 @@
 <!--Buy now modal-->
 <div class="by-now-modal__backdrop is-hidden" by-data-modal>
-    <div class="buy-now-modal by-now__modal">
-        <button class="buy-now-modal-close" by-data-modal-close type="button">
-            <svg class="buy-now-modal-icon-close" width="16" height="16">
-                <use href="./images/sprite.svg#icon-icon-close"></use>
-            </svg>
-        </button>
+  <div class="buy-now-modal by-now__modal">
+    <button class="buy-now-modal-close" by-data-modal-close type="button">
+      <svg class="buy-now-modal-icon-close" width="16" height="16">
+        <use href="./images/sprite.svg#icon-icon-close"></use>
+      </svg>
+    </button>
 
-        <section class="buy-now">
-                <p class="buy-now__title title">By now</p>
-                <ul class="buy-now-list list">
-                    <li class="buy-now-list__item">
-                        <h3 class="buy-now-list__title">ice cream</h3>
-                    </li>
-                    <li class="buy-now-list__item">
-                        <h3 class="buy-now-list__title">ice coffee</h3>
-                    </li>
-                    <li class="buy-now-list__item">
-                        <h3 class="buy-now-list__title">milkshakes</h3>
-                    </li>
-                </ul>
-        </section>
+    <section class="buy-now">
+      <p class="buy-now__title title">By now</p>
+      <ul class="buy-now-list list">
+        <li class="buy-now-list__item">
+          <h3 class="buy-now-list__title">ice cream</h3>
+        </li>
+        <li class="buy-now-list__item">
+          <h3 class="buy-now-list__title">ice coffee</h3>
+        </li>
+        <li class="buy-now-list__item">
+          <h3 class="buy-now-list__title">milkshakes</h3>
+        </li>
+      </ul>
+    </section>
 
-        <form class="buy-now-modal-form">
-            <div class="form-field">
-                <input type="text" class="modal-input" name="name" id="name" placeholder="Name" required autofocus />
-            </div>
-            <div class="form-field">
-                <input type="tel" class="modal-input" name="tel" id="tel" placeholder="Phone" required />
-            </div>
-            <div class="form-field form-field-textarea">
-                <textarea name="comment" class="modal-textarea" id="comment" placeholder="Comment"></textarea>
-            </div>
-            <button type="submit" class="form-button">Submit</button>
-        </form>
-    </div>
+    <form class="buy-now-modal-form">
+      <div class="form-field">
+        <input
+          type="text"
+          class="modal-input"
+          name="name"
+          id="name"
+          placeholder="Name"
+          required
+          autofocus
+        />
+      </div>
+      <div class="form-field">
+        <input
+          type="tel"
+          class="modal-input"
+          name="tel"
+          id="tel"
+          placeholder="Phone"
+          required
+        />
+      </div>
+      <div class="form-field form-field-textarea">
+        <textarea
+          name="comment"
+          class="modal-textarea"
+          id="comment"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="form-button">Submit</button>
+    </form>
+  </div>
 </div>
