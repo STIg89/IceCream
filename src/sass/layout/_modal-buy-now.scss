@@ -34,9 +34,13 @@
   max-width: 280px;
 
   @include tablet {
-    top: 50%;
+    // top: 50%;
     max-width: 568px;
     padding: 20px 20px 32px;
+  }
+
+  @include pc {
+    top: 50%;
   }
 }
 
@@ -65,6 +69,8 @@
 
   @include tablet {
     padding-bottom: 40px;
+    width: 568px;
+    margin-left: -22px;
   }
 }
 
