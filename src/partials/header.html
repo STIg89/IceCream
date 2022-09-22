@@ -8,24 +8,24 @@
       </a>
       <button
         type="button"
-        class="mobile_menu-btn"
+        class="mobile_menu-btn btn"
         data-menu-open
         aria-label="відкрити меню"
       >
-        <svg width="20" height="12">
-          <use href="./images/sprite.svg#icon-Burger"></use>
+        <svg class="burger-menu" width="20" height="12">
+          <use href="./images/sprite.svg#icon-Burger-menu"></use>
         </svg>
       </button>
     </nav>
 
     <button
       type="button"
-      class="tablet_menu-btn"
+      class="tablet_menu-btn btn"
       tablet-menu-open
       aria-label="Open menu"
     >
       <svg class="burger-menu" width="20" height="12">
-        <use href="./images/sprite.svg#icon-Burger"></use>
+        <use href="./images/sprite.svg#icon-Burger-menu"></use>
       </svg>
     </button>
 
@@ -71,7 +71,7 @@
         </ul>
       </nav>
 
-      <button type="button" class="menu-button" by-data-modal-open>
+      <button type="button" class="menu-button btn" by-data-modal-open>
         Buy now
         <svg width="12" height="12" class="menu-button-icon">
           <use href="./images/sprite.svg#icon-arrow-short"></use>
@@ -81,6 +81,8 @@
   </div>
 
   <div class="header__nav-menu header__nav-menu--is-hidden" tablet-menu>
+    <div class="container">
+      <div class="header-tablet-wraper">
     <a class="tablet-logo-link link" href="./index.html">
       <svg class="header-logo-svg">
         <use href="./images/sprite.svg#icon-icecream"></use>
@@ -96,7 +98,7 @@
         <use href="./images/sprite.svg#icon-icon-close"></use>
       </svg>
     </button>
-
+</div>
     <nav class="header-nav">
       <ul class="header-list list">
         <li class="header-item item">
@@ -113,5 +115,6 @@
         </li>
       </ul>
     </nav>
+    </div>
   </div>
 </header>
