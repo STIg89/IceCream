@@ -34,12 +34,14 @@ body {
 
 .btn {
     transition: color var(--duration) var(--cubic),
+    background-color var(--duration) var(--cubic),
     border-color var(--duration) var(--cubic);
     cursor: pointer;
 }
 
 .link {
-    transition: color var(--duration) var(--cubic);
+    transition: color var(--duration) var(--cubic),
+    border-color var(--duration) var(--cubic);
 }
 
 .round { 
