@@ -1,6 +1,16 @@
 .advantages {
-  margin-top: 108px;
-  margin-bottom: 40px;
+  padding-top: 42px;
+  padding-bottom: 36px;
+
+  @include tablet {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  @include pc {
+    padding-top: 60px;
+    padding-bottom: 86px;
+  }
 }
 
 .visually-hidden {
