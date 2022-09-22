@@ -38,6 +38,10 @@
     max-width: 568px;
     padding: 20px 20px 32px;
   }
+
+  @include pc {
+    top: 50%;
+  }
 }
 
 .buy-now-modal-close {
@@ -65,6 +69,8 @@
 
   @include tablet {
     padding-bottom: 40px;
+    width: 568px;
+    margin-left: -22px;
   }
 }
 
