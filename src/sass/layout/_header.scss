@@ -3,18 +3,42 @@
     display: flex;
     justify-content: space-between;
   }
+  @include tablet {
+    height: 0;
+  }
 }
 
-// .burger-menu {
-//   display: block;
-//   fill: currentColor;
-// }
+.burger-menu {
+  stroke: #ffffff;
+}
 
-// .burger-menu:hover,
-// .burger-menu:focus {
-//   display: block;
-//   fill: var(--yellowText);
-// }
+.tablet_menu-btn:hover .burger-menu,
+.tablet_menu-btn:focus .burger-menu {
+  stroke: var(--yellowText);
+  transition: stroke var(--duration) var(--cubic);
+}
+
+.mobile_menu-btn:hover .burger-menu,
+.mobile_menu-btn:focus .burger-menu {
+  stroke: var(--yellowText);
+  transition: stroke var(--duration) var(--cubic);
+}
+
+.menu-button-svg {
+  fill: #ffffff;
+}
+
+.mobile_menu-btn--close:hover .menu-button-svg,
+.mobile_menu-btn--close:focus .menu-button-svg {
+  fill: var(--yellowText);
+  transition: fill var(--duration) var(--cubic);
+}
+
+.tablet_menu-btn--close:hover .menu-button-svg,
+.tablet_menu-btn--close:focus .menu-button-svg {
+  fill: var(--yellowText);
+  transition: fill var(--duration) var(--cubic);
+}
 
 .header__mobile-menu {
   @media screen and (max-width: 767px) {
@@ -45,13 +69,11 @@
 
 .header-logo-link {
   @include tablet {
-    position: absolute;
-    left: 32;
-    top: 20;
+    display: inline-block;
+    margin-top: 20px;
   }
   @include pc {
     display: none;
-    position: static;
   }
 }
 
@@ -175,14 +197,13 @@
   display: none;
 
   @include tablet {
-    position: absolute;
     display: block;
-    top: 29;
-    right: 216;
     background-color: transparent;
     border: none;
     line-height: 0;
     padding: 10px 15px;
+    margin-top: 29px;
+    margin-left: 488px;
   }
   @include pc {
     display: none;
@@ -269,20 +290,24 @@
     text-align: center;
 
     color: #131313;
+
+    &:hover,
+    &:focus {
+      background-color: var(--accentBTN);
+      cursor: pointer;
+    }
+
     &-icon {
       margin-left: 7px;
     }
 
     @include tablet {
-      position: absolute;
-      top: 24px;
-      right: 32px;
+      margin-top: -89px;
+      margin-right: inherit;
     }
 
     @include pc {
-      position: unset;
       margin-top: 24px;
-      margin-right: inherit;
     }
   }
   &-mobile {
