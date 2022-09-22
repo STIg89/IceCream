@@ -27,7 +27,7 @@
   border: 2px solid var(--yellowText);
   border-radius: 10px;
   padding: 28px;
-  max-width: 280px;
+  min-width: 280px;
   @include tablet {
     max-width: 568px;
     padding: 32px 60px;
