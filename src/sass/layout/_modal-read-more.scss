@@ -31,16 +31,24 @@
     border: 2px solid var(--yellowText);
     border-radius: 10px;
     padding: 28px;
-      max-width: 568px;
-      padding: 32px 60px;
+      max-width: 280px;
+      padding: 28px;
+      @include tablet {
+        max-width: 568px;
+        padding: 32px 60px;
+      }
     &__close-button {
       position: absolute;
-      top: 20px;
-        right: 20px;
+      top: 8px;
+        right: 8px;
       background-color: transparent;
       color: #131313;
       fill: currentColor;
       border-color: transparent;
+      @include tablet {
+        top: 20px;
+        right: 20px;
+      }
       &:hover,
       &:focus {
         color: var(--BTN);
@@ -65,8 +73,15 @@
   }
 
   .read-modal__video { 
-    width: 448px;
-    height: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    height: 199px;
     margin-bottom: 32px;
     border-radius: 10px;
+    @include tablet {
+      width: 448px;
+    height: 205px;
+    }
+    
   }
