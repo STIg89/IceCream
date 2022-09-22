@@ -3,6 +3,14 @@
     display: flex;
     justify-content: space-between;
   }
+  @include tablet {
+    margin-top: 20px;
+    display: inline-block;
+    flex-grow: 1;
+  }
+  @include pc {
+    display: none;
+  }
 }
 
 // .burger-menu {
@@ -21,7 +29,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    max-width: 480px;
+    // max-width: 480px;
     width: 100%;
     min-height: 100vh;
     display: block;
@@ -35,19 +43,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
 
+  }
+@include tablet {
+  margin-top: 20px;
+}
   @include pc {
     display: flex;
     justify-content: space-between;
-  }
+    align-items: center;
+    position: static;  }
 }
 
 .header-logo-link {
   @include tablet {
-    position: absolute;
-    left: 32;
-    top: 20;
+    // position: absolute;
+    // left: 32;
+    // top: 20;
   }
   @include pc {
     display: none;
@@ -66,7 +78,7 @@
   @include pc {
     position: unset;
     display: block;
-    margin-right: 270px;
+    // margin-right: 270px;
   }
 }
 
@@ -84,9 +96,14 @@
 }
 
 .tablet-logo-link {
-  position: absolute;
-  left: 32;
-  top: 20;
+  // position: absolute;
+  // left: 32;
+  // top: 20;
+  display: inline-block;
+}
+.header-tablet-wraper {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .header__mobile-menu--is-hidden {
@@ -102,6 +119,11 @@
 
   @include tablet {
     margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include pc {
+    display: block;
   }
 }
 
@@ -149,12 +171,14 @@
 }
 
 .tablet_menu-btn--close {
-  position: absolute;
-  right: 32;
-  top: 32;
+  // position: absolute;
+  // right: 32;
+  // top: 32;
   border: none;
   background: transparent;
   line-height: 0;
+  margin-left: auto;
+  display: block;
 }
 
 .mobile_menu-btn {
@@ -175,14 +199,15 @@
   display: none;
 
   @include tablet {
-    position: absolute;
+    // position: absolute;
     display: block;
-    top: 29;
-    right: 216;
+    // top: 29;
+    // right: 216;
     background-color: transparent;
     border: none;
     line-height: 0;
     padding: 10px 15px;
+    margin-top: 15px;
   }
   @include pc {
     display: none;
@@ -274,15 +299,18 @@
     }
 
     @include tablet {
-      position: absolute;
-      top: 24px;
-      right: 32px;
+      // position: absolute;
+      // top: 24px;
+      // right: 32px;
+      display: inline-block;
+      margin-left: 32px;
     }
 
     @include pc {
       position: unset;
-      margin-top: 24px;
-      margin-right: inherit;
+      display: block;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
   &-mobile {
@@ -328,12 +356,16 @@
     line-height: 1.22;
 
     color: #fcfcfc;
+    @include tablet {
+      display: none;
+    }
     @include pc {
       display: flex;
       justify-content: space-between;
-      margin-top: 10px;
+      margin-top: 0;
       font-size: 16px;
       line-height: 1.25;
+      flex-grow: 1;
     }
   }
   &-list {
@@ -351,6 +383,7 @@
       display: flex;
       flex-direction: row;
       margin-top: 0px;
+      // margin-right: 240px;
     }
   }
   &-link {
