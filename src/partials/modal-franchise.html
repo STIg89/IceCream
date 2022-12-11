@@ -1,7 +1,7 @@
-<div class="franchise-modal__backdrop is-hidden" franchise-data-modal>
+<div class="franchise-modal__backdrop is-hidden" data-franchise-modal>
   <div class="franchise__modal">
     <button
-      franchise-data-modal-close
+      data-franchise-modal-close
       class="franchise-modal__close-button btn"
       title="Close"
     >
@@ -30,8 +30,7 @@
           minlength="2"
           autocomplete="off"
           pattern="[A-Za-z]+"
-          required
-        />
+          required>
         <!-- letters only, usage of numbers, punctuation or special characters is not allowed-->
         <input
           type="tel"
@@ -41,8 +40,7 @@
           name="user-phone"
           pattern="((\+|00)?[1-9]{2}|0)[1-9]( ?[0-9]){8}"
           minlength="9"
-          required
-        />
+          required>
         <input
           type="email"
           class="franchise-form__input"
@@ -50,8 +48,7 @@
           id="user-email"
           name="user-email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          required
-        />
+          required>
         <textarea
           name="user-comment"
           id="user-comment"
