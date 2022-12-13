@@ -1,7 +1,7 @@
 <!--Buy now modal-->
-<div class="by-now-modal__backdrop is-hidden" by-data-modal>
+<div class="by-now-modal__backdrop is-hidden" data-buy-modal>
   <div class="buy-now-modal by-now__modal">
-    <button class="buy-now-modal-close btn" by-data-modal-close type="button">
+    <button class="buy-now-modal-close btn" data-modal-buy-close type="button">
       <svg class="buy-now-modal-icon-close" width="16" height="16">
         <use href="./images/sprite.svg#icon-icon-close"></use>
       </svg>
@@ -31,8 +31,7 @@
           id="name"
           placeholder="Name"
           required
-          autofocus
-        />
+          autofocus>
       </div>
       <div class="form-field">
         <input
@@ -41,8 +40,7 @@
           name="tel"
           id="tel"
           placeholder="Phone"
-          required
-        />
+          required>
       </div>
       <div class="form-field form-field-textarea">
         <textarea
