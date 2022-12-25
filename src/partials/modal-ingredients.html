@@ -12,8 +12,8 @@
     <picture>
       <source
         srcset="
-          ./images/products_icecream@1x.jpg,
-          ./images/products_icecream@2x.jpg
+          ./images/products_icecream@1x.jpg 1x,
+          ./images/products_icecream@2x.jpg 2x
         "
         media="(max-width:767px)">
       <img class="modal-ingredients__img"
@@ -71,29 +71,29 @@
     </div>
 
     <form class="form">
-      <label class="form__label" for="name">
+      <label class="form__label" for="name-form-ingridient">
         <input
           class="form__input"
           type="text"
           name="name"
-          id="name"
+          id="name-form-ingridient"
           placeholder="Name"
           required>
       </label>
-      <label class="form__label" for="phone">
+      <label class="form__label" for="phone-form-ingridient">
         <input
           class="form__input"
           type="tel"
           name="tel"
-          id="phone"
+          id="phone-form-ingridient"
           placeholder="Phone"
           required>
       </label>
-      <label class="form__label" for="comment">
+      <label class="form__label" for="comment-form-ingridient">
         <textarea
           class="form__textarea"
           name="comment"
-          id="comment"
+          id="comment-form-ingridient"
           cols="30"
           rows="10"
           placeholder="Comment"
@@ -104,8 +104,6 @@
     
   </div>
 </div>
-</div>
-
 
 <div class="coffee-modal__backdrop is-hidden" data-coffee-modal>
 <div class="modal-ingredients coffee__modal">
@@ -180,29 +178,29 @@
     </div>
 
     <form class="form">
-      <label class="form__label" for="name">
+      <label class="form__label" for="name-form-ingridient--coffee">
         <input
           class="form__input form__input--coffee"
           type="text"
           name="name"
-          id="name"
+          id="name-form-ingridient--coffee"
           placeholder="Name"
           required>
       </label>
-      <label class="form__label" for="phone">
+      <label class="form__label" for="phone-form-ingridient--coffee">
         <input
           class="form__input form__input--coffee"
           type="tel"
           name="tel"
-          id="phone"
+          id="phone-form-ingridient--coffee"
           placeholder="Phone"
           required>
       </label>
-      <label class="form__label" for="comment">
+      <label class="form__label" for="comment-form-ingridient--coffee">
         <textarea
           class="form__textarea form__textarea--coffee"
           name="comment"
-          id="comment"
+          id="comment-form-ingridient--coffee"
           cols="30"
           rows="10"
           placeholder="Comment"
@@ -213,8 +211,6 @@
     
   </div>
 </div>
-</div>
-
 
 
 <div class="milkshake-modal__backdrop is-hidden" data-milkshake-modal>
@@ -231,14 +227,14 @@
     <picture>
       <source
         srcset="
-          ./images/products_milkshake@1x.png,
-          ./images/products_milkshake@2x.png
+          ./images/products_milkshake@1x.png 1x,
+          ./images/products_milkshake@2x.png 2x
         "
         media="(max-width:767px)">
       <img class="modal-ingredients__img"
         src="./images/products_milkshake@1x.png"
         alt="Ice Cream"        
-      />
+      >
     </picture>
     </div>
     <ul class="modal-ingredients__list list">
@@ -291,29 +287,29 @@
     </div>
 
     <form class="form">
-      <label class="form__label" for="name">
+      <label class="form__label" for="name-form-ingridient--milkshake">
         <input
           class="form__input form__input--milkshake"
           type="text"
           name="name"
-          id="name"
+          id="name-form-ingridient--milkshake"
           placeholder="Name"
           required>
       </label>
-      <label class="form__label" for="phone">
+      <label class="form__label" for="phone-form-ingridient--milkshake">
         <input
           class="form__input form__input--milkshake"
           type="tel"
           name="tel"
-          id="phone"
+          id="phone-form-ingridient--milkshake"
           placeholder="Phone"
           required>
       </label>
-      <label class="form__label" for="comment">
+      <label class="form__label" for="comment-form-ingridient--milkshake">
         <textarea
           class="form__textarea form__textarea--milkshake"
           name="comment"
-          id="comment"
+          id="comment-form-ingridient--milkshake"
           cols="30"
           rows="10"
           placeholder="Comment"
@@ -324,5 +320,4 @@
 
     
   </div>
-</div>
 </div>
