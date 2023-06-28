@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://STIg89.github.io/command-project-HTML-CSS",
+  "homepage": "https://STIg89.github.io/IceCream/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /command-project-HTML-CSS/"
+    "build": "parcel build src/*.html --public-url /IceCream/"
   },
   "repository": {
     "type": "git",
